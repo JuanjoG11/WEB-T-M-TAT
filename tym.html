@@ -1,10 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TYM</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="tym-bg colorful-bg">
 
-<!DOCTYPE html><html lang="es"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>TYM</title>
-<link rel="stylesheet" href="styles.css">
-<script defer src="script.js"></script>
-</head><body class="tym-bg">
 <nav class="navbar">
   <img src="logo_tym.png" class="logo" alt="Logo TYM">
   <ul>
@@ -12,21 +16,24 @@
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#productos">Productos</a></li>
     <li><a href="#aliados">Aliados</a></li>
+    <li><a href="#capacitaciones">Capacitaciones</a></li>
+    <li><a href="#nomina">Nómina</a></li>
     <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#peticiones">Solicitudes</a></li>
   </ul>
 </nav>
 
-<section id="inicio" class="section">
+<section id="inicio" class="section glass">
   <h2>Bienvenido a TYM</h2>
-  <p>Conectando marcas con el Eje Cafetero</p>
+  <p>Conectando marcas con el Eje Cafetero.</p>
 </section>
 
-<section id="nosotros" class="section">
+<section id="nosotros" class="section glass">
   <h2>Nosotros</h2>
   <p>Misión, visión e historia de TYM aparecerán aquí.</p>
 </section>
 
-<section id="productos" class="section">
+<section id="productos" class="section glass">
   <h2>Productos</h2>
   <div class="cards">
     <div class="card">Producto 1</div>
@@ -35,7 +42,7 @@
   </div>
 </section>
 
-<section id="aliados" class="section">
+<section id="aliados" class="section glass">
   <h2>Aliados</h2>
   <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;margin-top:2rem;">
     <img src="logo_tym.png" alt="Aliado 1">
@@ -43,36 +50,39 @@
   </div>
 </section>
 
-<section id="contacto" class="section">
-  <h2>Contacto</h2>
-  <form>
-    <input type="text" placeholder="Nombre">
-    <input type="email" placeholder="Correo">
-    <textarea rows="4" placeholder="Mensaje"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-  <section id="capacitaciones" class="section">
+<section id="capacitaciones" class="section glass">
   <h2>Capacitaciones</h2>
   <p>Explora nuestros cursos y talleres para formación continua.</p>
+  <a href="https://tulink.com/capacitaciones" class="btn-capacitacion" target="_blank">Ir a Capacitaciones</a>
 </section>
 
-<section id="peticiones" class="section">
-  <h2>Peticiones, quejas o reclamos</h2>
-  <form action="juanjosecolorado266@gmail.com" method="post" enctype="text/plain">
-    <select name="tipo">
-      <option value="petición">Petición</option>
-      <option value="queja">Queja</option>
-      <option value="reclamo">Reclamo</option>
-    </select>
-    <input type="text" name="nombre" placeholder="Nombre" required>
-    <input type="email" name="email" placeholder="Correo" required>
-    <textarea name="mensaje" rows="4" placeholder="Describe tu solicitud" required></textarea>
+<section id="nomina" class="section glass">
+  <h2>Conoce tu Nómina</h2>
+  <p>Consulta tus pagos y reportes laborales aquí:</p>
+  <a href="https://distri.tu-nomina.com/index.php/inicio" class="btn-nomina" target="_blank">Ir a plataforma</a>
+</section>
+<section id="peticiones" class="section glass">
+  <h2>Solicitudes y constancias</h2>
+  <p>Solicita aquí tu carta laboral, constancia o documento necesario. Te contactaremos al correo que indiques.</p>
+  <form action="mailto:juanjosecolorado266@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="text" name="tipo" placeholder="Tipo de solicitud (carta, constancia, etc)" required>
+    <textarea name="mensaje" rows="4" placeholder="Información adicional o detalles" required></textarea>
     <button type="submit">Enviar</button>
   </form>
+</section>
+<section id="contacto" class="section glass">
+  <h2>Contacto</h2>
+  <p><strong>Dirección:</strong> Calle 123, Pereira, Colombia</p>
+  <p><strong>Teléfono:</strong> +57 301 693 2397</p>
+  <p><strong>Correo:</strong> contacto@mgmail.com</p>
+  <p><strong>Horario:</strong> Lunes a Sábado de 9:00 a.m. a 6:00 p.m.</p>
 </section>
 
 <div class="footer">
   © 2025 TYM. Todos los derechos reservados | <a href="index.html">Volver a inicio</a>
 </div>
-</body></html>
+
+</body>
+</html>
