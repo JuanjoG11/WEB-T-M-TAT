@@ -358,3 +358,40 @@ body { font-family: 'Poppins', sans-serif; }
   background-size: 300% 300%;
   animation: gradientShift 15s ease infinite;
 }
+.mapa-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.botones-departamentos button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botones-departamentos button:hover {
+  background-color: #005fa3;
+}
+
+.svg-mapa circle {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.svg-mapa circle:hover {
+  transform: scale(1.1);
+}
+
+.svg-mapa text {
+  font-family: 'Segoe UI', sans-serif;
+}

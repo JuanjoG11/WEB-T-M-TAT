@@ -53,12 +53,59 @@
 </section>
 
 <section id="contacto" class="section glass">
-  <h2>Contacto</h2>
-  <p><strong>Dirección:</strong> Calle 123, Pereira, Colombia</p>
-  <p><strong>Teléfono:</strong> +57 301 693 2397</p>
-  <p><strong>Correo:</strong> contacto@mgmail.com</p>
-  <p><strong>Horario:</strong> Lunes a Sábado de 9:00 a.m. a 6:00 p.m.</p>
+  <h2>Mapa de Cobertura TAT</h2>
+  <p>Empresas cubiertas: <strong>Unilever, Familia</strong></p>
+
+  <div class="mapa-container">
+    <div class="botones-departamentos">
+      <button onclick="mostrarDeptoTAT('quindio')">Ver Quindío</button>
+      <button onclick="mostrarDeptoTAT('risaralda')">Ver Risaralda</button>
+      <button onclick="mostrarDeptoTAT('caldas')">Ver Caldas</button>
+    </div>
+
+    <svg class="svg-mapa" width="100%" height="400px" viewBox="0 0 800 400">
+      <!-- Quindío -->
+      <g id="quindio-tat" style="display:none">
+        <circle cx="200" cy="250" r="80" fill="#ffe4ec" />
+        <text x="200" y="245" text-anchor="middle" fill="#000" font-size="16px">Quindío</text>
+        <circle cx="200" cy="270" r="6" fill="#cc0066" />
+        <text x="210" y="275" font-size="14px">Armenia - Unilever</text>
+      </g>
+
+      <!-- Risaralda -->
+      <g id="risaralda-tat" style="display:none">
+        <circle cx="400" cy="180" r="80" fill="#d0f0fd" />
+        <text x="400" y="175" text-anchor="middle" fill="#000" font-size="16px">Risaralda</text>
+        <circle cx="400" cy="200" r="6" fill="#0099ff" />
+        <text x="410" y="205" font-size="14px">Pereira - Familia</text>
+      </g>
+
+      <!-- Caldas -->
+      <g id="caldas-tat" style="display:none">
+        <circle cx="600" cy="250" r="80" fill="#fff8d2" />
+        <text x="600" y="245" text-anchor="middle" fill="#000" font-size="16px">Caldas</text>
+        <circle cx="600" cy="270" r="6" fill="#ffaa00" />
+        <text x="610" y="275" font-size="14px">Manizales - Unilever</text>
+      </g>
+    </svg>
+  </div>
 </section>
+
+
+
+<script>
+  function mostrarDeptoTAT(id) {
+    const departamentos = ['quindio', 'risaralda', 'caldas'];
+    departamentos.forEach(depto => {
+      const el = document.getElementById(`${depto}-tat`);
+      if (el) el.style.display = (depto === id) ? 'block' : 'none';
+    });
+  }
+
+  // Mostrar Risaralda por defecto
+  mostrarDeptoTAT('risaralda');
+</script>
+
 
 <section id="capacitaciones" class="section glass">
   <h2>Capacitaciones</h2>

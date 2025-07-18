@@ -72,13 +72,60 @@
     <button type="submit">Enviar</button>
   </form>
 </section>
-<section id="contacto" class="section glass">
-  <h2>Contacto</h2>
-  <p><strong>Dirección:</strong> Calle 123, Pereira, Colombia</p>
-  <p><strong>Teléfono:</strong> +57 301 693 2397</p>
-  <p><strong>Correo:</strong> contacto@mgmail.com</p>
-  <p><strong>Horario:</strong> Lunes a Sábado de 9:00 a.m. a 6:00 p.m.</p>
+<section id="Contacto" class="section glass">
+  <h2>Mapa de Cobertura TYM</h2>
+  <p>Empresas cubiertas: <strong>Alpina, Zenú, Fleischmann, Polar</strong></p>
+
+  <div class="mapa-container">
+    <div class="botones-departamentos">
+      <button onclick="mostrarDepto('quindio')">Ver Quindío</button>
+      <button onclick="mostrarDepto('risaralda')">Ver Risaralda</button>
+      <button onclick="mostrarDepto('caldas')">Ver Caldas</button>
+    </div>
+
+    <svg class="svg-mapa" width="100%" height="400px" viewBox="0 0 800 400">
+      <!-- Quindío -->
+      <g id="quindio" style="display:none">
+        <circle cx="200" cy="250" r="80" fill="#ffd1dc" />
+        <text x="200" y="245" text-anchor="middle" fill="#000" font-size="16px">Quindío</text>
+        <circle cx="200" cy="270" r="6" fill="#ff0066" />
+        <text x="210" y="275" font-size="14px">Armenia - Polar</text>
+      </g>
+
+      <!-- Risaralda -->
+      <g id="risaralda" style="display:none">
+        <circle cx="400" cy="180" r="80" fill="#c6e2ff" />
+        <text x="400" y="175" text-anchor="middle" fill="#000" font-size="16px">Risaralda</text>
+        <circle cx="400" cy="200" r="6" fill="#0033cc" />
+        <text x="410" y="205" font-size="14px">Pereira - Alpina</text>
+      </g>
+
+      <!-- Caldas -->
+      <g id="caldas" style="display:none">
+        <circle cx="600" cy="250" r="80" fill="#fff2cc" />
+        <text x="600" y="245" text-anchor="middle" fill="#000" font-size="16px">Caldas</text>
+        <circle cx="600" cy="270" r="6" fill="#cc6600" />
+        <text x="610" y="275" font-size="14px">Manizales - Zenú</text>
+      </g>
+    </svg>
+  </div>
 </section>
+
+<script>
+  function mostrarDepto(id) {
+    const departamentos = ['quindio', 'risaralda', 'caldas'];
+    departamentos.forEach(depto => {
+      document.getElementById(depto).style.display = (depto === id) ? 'block' : 'none';
+    });
+  }
+
+  // Mostrar Risaralda por defecto
+  mostrarDepto('risaralda');
+</script>
+
+
+
+
 
 <div class="footer">
   © 2025 TYM. Todos los derechos reservados | <a href="index.html">Volver a inicio</a>
