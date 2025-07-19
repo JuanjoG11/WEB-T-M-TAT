@@ -395,3 +395,86 @@ body { font-family: 'Poppins', sans-serif; }
 .svg-mapa text {
   font-family: 'Segoe UI', sans-serif;
 }
+.barra-años {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.barra-años::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #00aaff;
+  z-index: 0;
+}
+
+.barra-años button {
+  position: relative;
+  z-index: 1;
+  background: white;
+  border: 2px solid #00aaff;
+  border-radius: 50%;
+  padding: 1rem;
+  font-weight: bold;
+  color: #00aaff;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+.barra-años button:hover,
+.barra-años button.active {
+  background: #00aaff;
+  color: white;
+  transform: scale(1.1);
+}
+
+.contenedor-eventos {
+  margin-top: 3rem;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.evento {
+  display: none;
+  background: white;
+  padding: 2rem;
+  max-width: 600px;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.evento.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titulo-historia {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.evento {
+  padding: 2rem;
+  background: rgb(49, 190, 255);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  min-height: 150px;
+  box-shadow: 0 0 12px rgba(30, 201, 253, 0.1);
+  font-size: 1rem;
+  color: #333;
+  display: none;
+}

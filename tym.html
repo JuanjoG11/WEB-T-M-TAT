@@ -29,9 +29,87 @@
 </section>
 
 <section id="nosotros" class="section glass">
-  <h2>Nosotros</h2>
-  <p>Misión, visión e historia de TYM aparecerán aquí.</p>
+  <h2 class="titulo-historia"> Principales hechos</h2>
+
+  <div class="barra-años">
+    <button onclick="mostrarEvento('2016')">2016</button>
+    <button onclick="mostrarEvento('2017')">2017</button>
+    <button onclick="mostrarEvento('2018')">2018</button>
+    <button onclick="mostrarEvento('2019')">2019</button>
+    <button onclick="mostrarEvento('2020')">2020</button>
+    <button onclick="mostrarEvento('2021')">2021</button>
+    <button onclick="mostrarEvento('2022')">2022 / 23</button>
+    <button onclick="mostrarEvento('2024')">2024</button>
+  </div>
+
+  <div class="contenedor-eventos">
+    <div class="evento" id="evento-2016">
+      <h3>2016 - Se funda T&M del Eje Cafetero</h3>
+      <p>Operación en Pereira con bodega.<br>Proveedor: Alpina - $2.400 MM</p>
+    </div>
+
+    <div class="evento" id="evento-2017">
+      <h3>2017 - Apertura Bodega Manizales</h3>
+      <p>Operación descentralizada en Manizales<br>Ubicada en el sector de Maltería<br>1.150 m²</p>
+    </div>
+
+    <div class="evento" id="evento-2018">
+      <h3>2018 - Apertura Bodega Armenia</h3>
+      <p>Para atender el Quindío<br>Ubicada en la vía el Edén<br>1.200 m²</p>
+    </div>
+
+    <div class="evento" id="evento-2019">
+      <h3>2019 - Consolidación territorios Alpina</h3>
+      <p>Alpina desmonta fuerza de ventas del TAT y Tiendas y Marcas la retoma</p>
+    </div>
+
+    <div class="evento" id="evento-2020">
+      <h3>2020 - Nueva Realidad</h3>
+      <p>Ajustes de modelos en operaciones<br>Estabilización y solo -1.4% en ventas</p>
+    </div>
+
+    <div class="evento" id="evento-2021">
+      <h3>2021 - Buscar Crecimientos</h3>
+      <p>Renovación de talento<br>Trabajo con la gente<br>Focalizar esfuerzos<br>Nuevos proveedores<br>Proceso comercial</p>
+    </div>
+
+    <div class="evento" id="evento-2022">
+      <h3>2022 / 23 - Fortalecer y Expandir</h3>
+      <p>Tecnología<br>Nuevos procesos<br>Creación de TAT<br>Fortalecimiento de la comercial</p>
+    </div>
+
+    <div class="evento" id="evento-2024">
+      <h3>2024 - Reingeniería</h3>
+      <p>Unificar TAT y T&M en una sola bodega en Pereira<br>Buscar otros ingresos<br>Otro proveedor líder<br>Productividad</p>
+    </div>
+  </div>
 </section>
+
+<script>
+ 
+  function mostrarEvento(anio) {
+    const eventos = document.querySelectorAll('.evento');
+    eventos.forEach(e => {
+      e.classList.remove('active');
+    });
+
+    const buttons = document.querySelectorAll('.barra-años button');
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    const target = document.getElementById('evento-' + anio.replace(' / ', ''));
+    if (target) target.classList.add('active');
+
+    const activeButton = Array.from(buttons).find(b => b.textContent.includes(anio));
+    if (activeButton) activeButton.classList.add('active');
+  }
+
+  mostrarEvento('2016');
+
+
+</script>
+
 
 <section id="productos" class="section glass">
   <h2>Productos</h2>
