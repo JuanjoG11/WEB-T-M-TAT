@@ -29,7 +29,7 @@
 </section>
 
 <section id="nosotros" class="section glass">
-  <h2 class="titulo-historia"> Principales hechos</h2>
+  <h2 class="titulo-historia"> Historia al pasar los años</h2>
 
   <div class="barra-años">
     <button onclick="mostrarEvento('2016')">2016</button>
@@ -139,70 +139,528 @@
   <p>Consulta tus pagos y reportes laborales aquí:</p>
   <a href="https://distri.tu-nomina.com/index.php/inicio" class="btn-nomina" target="_blank">Ir a plataforma</a>
 </section>
-<section id="peticiones" class="section glass">
-  <h2>Solicitudes y constancias</h2>
-  <p>Solicita aquí tu carta laboral, constancia o documento necesario. Te contactaremos al correo que indiques.</p>
-  <form action="mailto:juanjosecolorado266@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="nombre" placeholder="Nombre completo" required>
-    <input type="email" name="email" placeholder="Correo electrónico" required>
-    <input type="text" name="tipo" placeholder="Tipo de solicitud (carta, constancia, etc)" required>
-    <textarea name="mensaje" rows="4" placeholder="Información adicional o detalles" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-<section id="contacto" class="section glass">
-  <h2>Mapa de Cobertura TYM</h2>
-  <p>Empresas cubiertas: <strong>Alpina, Zenú, Fleischmann, Polar</strong></p>
+   <section id="peticiones" class="section glass">
+        <h2>Solicitudes y constancias</h2>
+        <p>Solicita aquí tu carta laboral, constancia o documento necesario. Te contactaremos al correo que indiques.</p>
+        
+      <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitudes - Corregido</title>
+    <style>
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .btn-enviar {
+            background-color: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-enviar:hover {
+            background-color: #0056b3;
+        }
+        
+        .btn-enviar:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .mensaje-estado {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .exito {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        .info-adicional {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Campo honeypot oculto */
+        .honeypot {
+            position: absolute !important;
+            left: -9999px !important;
+            width: 1px !important;
+            height: 1px !important;
+            overflow: hidden !important;
+        }
+    </style>
+</head>
+<body>
+    <section id="peticiones">
+       
+        
+        <form action="https://formspree.io/f/xgvzaqby" method="POST" id="form-peticiones">
+            
+            <!-- Campo honeypot anti-spam (oculto) -->
+            <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Tu correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="tipo">Tipo de solicitud:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona el tipo de solicitud</option>
+                    <option value="carta-laboral">Carta laboral</option>
+                    <option value="constancia-ingresos">Constancia de ingresos</option>
+                    <option value="certificado-trabajo">Certificado de trabajo</option>
+                    <option value="constancia-afiliacion">Constancia de afiliación</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Información adicional o detalles:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Describe los detalles específicos de tu solicitud, fechas necesarias, o cualquier información adicional..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono de contacto (opcional):</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+            </div>
+            
+            <!-- Campos ocultos mejorados -->
+            <input type="hidden" name="_subject" value="Nueva solicitud TYM - Peticiones y Constancias">
+            <input type="hidden" name="_autoresponse" value="Hemos recibido tu solicitud correctamente. Nos pondremos en contacto contigo pronto. - Equipo TYM">
+            <!-- Eliminado el _cc redundante -->
+            <!-- Mejorada la redirección -->
+            <input type="hidden" name="_next" value="javascript:void(0)">
+            
+            <button type="submit" id="btn-submit" class="btn-enviar">
+                <span id="btn-text">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m22 2-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                    Enviar Solicitud
+                </span>
+                <span id="btn-loading" style="display: none;">
+                    <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="m12 6-4 6 4 6"/>
+                    </svg>
+                    Enviando...
+                </span>
+            </button>
+        </form>
+        
+        <!-- Mensajes de estado -->
+        <div id="mensaje-exito" class="mensaje-estado exito" style="display: none;">
+            <div class="mensaje-icono">✅</div>
+            <div class="mensaje-contenido">
+                <strong>¡Solicitud enviada correctamente!</strong>
+                <p>Hemos recibido tu solicitud. Te contactaremos al correo <strong id="email-confirmacion"></strong> en las próximas horas.</p>
+            </div>
+        </div>
+        
+        <div id="mensaje-error" class="mensaje-estado error" style="display: none;">
+            <div class="mensaje-icono">❌</div>
+            <div class="mensaje-contenido">
+                <strong>Error al enviar la solicitud</strong>
+                <p>No se pudo procesar tu solicitud. Por favor intenta nuevamente o contacta directamente a <a href="mailto:juanjosecolorado266@gmail.com">juanjosecolorado266@gmail.com</a></p>
+            </div>
+        </div>
+        
+        <!-- Información adicional -->
+        <div class="info-adicional">
+            <h3>📋 Información importante:</h3>
+            <ul>
+                <li><strong>Tiempo de respuesta:</strong> 24-48 horas hábiles</li>
+                <li><strong>Documentos digitales:</strong> Se envían por correo electrónico</li>
+                <li><strong>Consultas:</strong> Puedes escribir directamente a juanjosecolorado266@gmail.com</li>
+                <li><strong>Horario de atención:</strong> Lunes a viernes de 8:00 AM a 6:00 PM</li>
+            </ul>
+        </div>
+    </section>
 
-  <div class="mapa-container">
-    <div class="botones-departamentos">
-      <button onclick="mostrarDepto('quindio')">Ver Quindío</button>
-      <button onclick="mostrarDepto('risaralda')">Ver Risaralda</button>
-      <button onclick="mostrarDepto('caldas')">Ver Caldas</button>
-    </div>
+    <script>
+        document.getElementById('form-peticiones').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevenir envío tradicional
+            
+            const btnSubmit = document.getElementById('btn-submit');
+            const btnText = document.getElementById('btn-text');
+            const btnLoading = document.getElementById('btn-loading');
+            const mensajeExito = document.getElementById('mensaje-exito');
+            const mensajeError = document.getElementById('mensaje-error');
+            const emailInput = document.getElementById('email');
+            const emailConfirmacion = document.getElementById('email-confirmacion');
+            
+            // Verificar campo honeypot
+            const honeypot = this.querySelector('input[name="_gotcha"]');
+            if (honeypot.value) {
+                // Probable spam, no enviar
+                return false;
+            }
+            
+            // Ocultar mensajes anteriores
+            mensajeExito.style.display = 'none';
+            mensajeError.style.display = 'none';
+            
+            // Mostrar estado de carga
+            btnSubmit.disabled = true;
+            btnSubmit.classList.add('loading');
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'flex';
+            
+            const formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Éxito
+                    emailConfirmacion.textContent = emailInput.value;
+                    mensajeExito.style.display = 'flex';
+                    this.reset(); // Limpiar formulario
+                    
+                    // Scroll suave al mensaje
+                    setTimeout(() => {
+                        mensajeExito.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'center' 
+                        });
+                    }, 100);
+                } else {
+                    return response.json().then(data => {
+                        throw new Error(data.error || 'Error en el envío');
+                    });
+                }
+            })
+            .catch(error => {
+                // Error
+                console.error('Error:', error);
+                mensajeError.style.display = 'flex';
+                
+                setTimeout(() => {
+                    mensajeError.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                }, 100);
+            })
+            .finally(() => {
+                // Restaurar botón
+                btnSubmit.disabled = false;
+                btnSubmit.classList.remove('loading');
+                btnText.style.display = 'flex';
+                btnLoading.style.display = 'none';
+            });
+        });
 
-    <svg class="svg-mapa" width="100%" height="400px" viewBox="0 0 800 400">
-      <!-- Quindío -->
-      <g id="quindio" style="display:none">
-        <circle cx="200" cy="250" r="80" fill="#ffd1dc" />
-        <text x="200" y="245" text-anchor="middle" fill="#000" font-size="16px">Quindío</text>
-        <circle cx="200" cy="270" r="6" fill="#ff0066" />
-        <text x="210" y="275" font-size="14px">Armenia - Polar</text>
-      </g>
+        // Validación en tiempo real del email
+        document.getElementById('email').addEventListener('input', function() {
+            const email = this.value;
+            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            
+            if (email && !isValid) {
+                this.setCustomValidity('Por favor ingresa un correo electrónico válido');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
 
-      <!-- Risaralda -->
-      <g id="risaralda" style="display:none">
-        <circle cx="400" cy="180" r="80" fill="#c6e2ff" />
-        <text x="400" y="175" text-anchor="middle" fill="#000" font-size="16px">Risaralda</text>
-        <circle cx="400" cy="200" r="6" fill="#0033cc" />
-        <text x="410" y="205" font-size="14px">Pereira - Alpina</text>
-      </g>
+        // Autoexpandir textarea
+        document.getElementById('message').addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
 
-      <!-- Caldas -->
-      <g id="caldas" style="display:none">
-        <circle cx="600" cy="250" r="80" fill="#fff2cc" />
-        <text x="600" y="245" text-anchor="middle" fill="#000" font-size="16px">Caldas</text>
-        <circle cx="600" cy="270" r="6" fill="#cc6600" />
-        <text x="610" y="275" font-size="14px">Manizales - Zenú</text>
-      </g>
-    </svg>
-  </div>
-</section>
+        // Limpiar honeypot si se llena accidentalmente
+        document.querySelector('input[name="_gotcha"]').addEventListener('input', function() {
+            this.value = '';
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Cobertura TYM - Eje Cafetero</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="contacto" class="section glass">
+        <h2>MAPA DE COBERTURA TYM</h2>
+        <div class="empresas-info">
+            <strong>Empresas Atendidas:</strong> Alpina • Zenú • Fleischmann • Polar
+        </div>
+        
+        <div class="mapa-container">
+            <svg class="svg-mapa" width="100%" height="700px" viewBox="0 0 1000 700">
+                <!-- Título y coordenadas -->
+                <text x="500" y="30" text-anchor="middle" font-size="22px" font-weight="bold" fill="#2c5f2d">
+                    EJE CAFETERO COLOMBIANO - REGIÓN DE COBERTURA TYM
+                </text>
+                <text x="500" y="50" text-anchor="middle" font-size="12px" fill="#636e72">
+                    Cordillera Central • Triángulo del Café • Colombia
+                </text>
 
-<script>
-  function mostrarDepto(id) {
-    const departamentos = ['quindio', 'risaralda', 'caldas'];
-    departamentos.forEach(depto => {
-      document.getElementById(depto).style.display = (depto === id) ? 'block' : 'none';
-    });
-  }
+                <!-- Cordillera Central (contexto geográfico) -->
+                <path class="cordillera" d="M50 100 Q150 150 Q250 200 Q350 250 Q450 300 Q550 350 Q650 400 Q750 450 Q850 500"/>
+                <path class="cordillera" d="M70 120 Q170 170 Q270 220 Q370 270 Q470 320 Q570 370 Q670 420 Q770 470 Q870 520"/>
 
-  // Mostrar Risaralda por defecto
-  mostrarDepto('risaralda');
-</script>
+                <!-- Ríos principales -->
+                <path class="rio" d="M100 200 Q200 250 Q300 300 Q400 350 Q500 400"/>
+                <path class="rio" d="M200 150 Q300 200 Q400 250 Q500 300 Q600 350"/>
+                <path class="rio" d="M400 100 Q500 150 Q600 200 Q700 250 Q800 300"/>
 
+                <!-- DEPARTAMENTOS LIMÍTROFES (contexto) -->
+                
+                <!-- Antioquia (norte) -->
+                <path class="departamento antioquia" 
+                      d="M200 80 L600 80 L650 120 L620 180 L580 200 L400 180 L300 150 L200 120 Z"/>
+                <text x="400" y="130" text-anchor="middle" class="texto-depto" fill="#2d3436" font-size="14px">ANTIOQUIA</text>
 
+                <!-- Valle del Cauca (oeste) -->
+                <path class="departamento valle" 
+                      d="M50 200 L200 180 L250 250 L280 350 L250 450 L150 480 L80 400 L50 300 Z"/>
+                <text x="150" y="330" text-anchor="middle" class="texto-depto" fill="#2d3436" font-size="14px">VALLE</text>
 
+                <!-- Tolima (este) -->
+                <path class="departamento tolima" 
+                      d="M650 200 L850 220 L880 300 L850 400 L780 450 L700 430 L650 350 L620 280 Z"/>
+                <text x="750" y="330" text-anchor="middle" class="texto-depto" fill="#2d3436" font-size="14px">TOLIMA</text>
+
+                <!-- DEPARTAMENTOS PRINCIPALES (cobertura TYM) -->
+
+                <!-- RISARALDA -->
+                <path class="departamento risaralda" 
+                      d="M300 180 L500 170 L580 200 L600 250 L580 300 L520 330 L400 340 L320 320 L280 280 L300 220 Z"/>
+                <text x="440" y="210" text-anchor="middle" class="texto-depto" fill="#00b894" font-size="18px">RISARALDA</text>
+
+                <!-- Pereira -->
+                <circle class="ciudad-punto" cx="440" cy="270" r="12" fill="#00b894" stroke="white" stroke-width="3"/>
+                <text x="465" y="275" class="texto-ciudad">Pereira</text>
+                <rect x="465" y="280" width="50" height="15" rx="7" fill="#00b894"/>
+                <text x="490" y="290" text-anchor="middle" class="empresa-badge">ALPINA</text>
+
+                <!-- QUINDÍO -->
+                <path class="departamento quindio" 
+                      d="M280 320 L400 340 L420 380 L400 420 L350 450 L280 460 L230 430 L210 380 L230 340 Z"/>
+                <text x="330" y="360" text-anchor="middle" class="texto-depto" fill="#d63031" font-size="18px">QUINDÍO</text>
+
+                <!-- Armenia -->
+                <circle class="ciudad-punto" cx="330" cy="410" r="12" fill="#d63031" stroke="white" stroke-width="3"/>
+                <text x="355" y="415" class="texto-ciudad">Armenia</text>
+                <rect x="355" y="420" width="40" height="15" rx="7" fill="#d63031"/>
+                <text x="375" y="430" text-anchor="middle" class="empresa-badge">POLAR</text>
+
+                <!-- CALDAS -->
+                <path class="departamento caldas" 
+                      d="M520 330 L650 320 L700 350 L720 400 L680 450 L620 470 L550 460 L500 430 L480 380 L500 350 Z"/>
+                <text x="600" y="360" text-anchor="middle" class="texto-depto" fill="#e17055" font-size="18px">CALDAS</text>
+
+                <!-- Manizales -->
+                <circle class="ciudad-punto" cx="600" cy="410" r="12" fill="#e17055" stroke="white" stroke-width="3"/>
+                <text x="625" y="415" class="texto-ciudad">Manizales</text>
+                <rect x="625" y="420" width="80" height="15" rx="7" fill="#e17055"/>
+                <text x="665" y="430" text-anchor="middle" class="empresa-badge">ZENÚ & FLEISCHMAN</text>
+
+                <!-- Red de carreteras principales -->
+                <path class="carretera" d="M330 410 Q385 340 Q440 270"/>
+                <path class="carretera" d="M440 270 Q520 340 Q600 410"/>
+                <path class="carretera" d="M330 410 Q465 410 Q600 410"/>
+
+                <!-- Autopista del Café -->
+                <path class="carretera" d="M200 300 Q330 350 Q600 380" stroke-width="3"/>
+                <text x="400" y="360" font-size="10px" fill="#636e72" text-anchor="middle">Autopista del Café</text>
+
+                <!-- Aeropuertos -->
+                <g transform="translate(420, 250)">
+                    <rect x="-15" y="-5" width="30" height="10" fill="#2d3436" rx="2"/>
+                    <text x="0" y="3" text-anchor="middle" font-size="8px" fill="white">✈</text>
+                    <text x="0" y="-12" text-anchor="middle" font-size="9px" fill="#636e72">Aeropuerto UIO Matecaña</text>
+                </g>
+
+                <g transform="translate(315, 390)">
+                    <rect x="-15" y="-5" width="30" height="10" fill="#2d3436" rx="2"/>
+                    <text x="0" y="3" text-anchor="middle" font-size="8px" fill="white">✈</text>
+                    <text x="0" y="-12" text-anchor="middle" font-size="9px" fill="#636e72">El Edén</text>
+                </g>
+
+                <!-- Volcanes representativos -->
+                <g transform="translate(550, 150)">
+                    <path d="M0 40 L20 0 L40 40" stroke="#95a5a6" stroke-width="2" fill="white"/>
+                    <circle cx="20" cy="5" r="4" fill="white"/>
+                    <text x="45" y="25" font-size="10px" fill="#636e72">Nevado del Ruiz</text>
+                    <text x="45" y="35" font-size="8px" fill="#636e72">5,321 msnm</text>
+                </g>
+
+                <!-- Plantaciones de café (decorativo) -->
+                <g opacity="0.6">
+                    <g transform="translate(360, 300)">
+                        <circle cx="0" cy="0" r="3" fill="#8b4513"/>
+                        <circle cx="8" cy="-3" r="2" fill="#8b4513"/>
+                        <circle cx="-5" cy="5" r="2" fill="#8b4513"/>
+                        <text x="15" y="0" font-size="8px" fill="#636e72">Zona Cafetera</text>
+                    </g>
+                    <g transform="translate(480, 380)">
+                        <circle cx="0" cy="0" r="3" fill="#8b4513"/>
+                        <circle cx="8" cy="-3" r="2" fill="#8b4513"/>
+                        <circle cx="-5" cy="5" r="2" fill="#8b4513"/>
+                    </g>
+                </g>
+
+                <!-- Rosa de los vientos -->
+                <g transform="translate(880, 120)">
+                    <circle cx="0" cy="0" r="35" fill="none" stroke="#2d3436" stroke-width="2"/>
+                    <path d="M0,-30 L10,0 L0,30 L-10,0 Z" fill="#e17055"/>
+                    <text x="0" y="-45" text-anchor="middle" font-size="16px" fill="#2d3436" font-weight="bold">N</text>
+                    <text x="45" y="5" text-anchor="middle" font-size="12px" fill="#2d3436">E</text>
+                    <text x="0" y="55" text-anchor="middle" font-size="12px" fill="#2d3436">S</text>
+                    <text x="-45" y="5" text-anchor="middle" font-size="12px" fill="#2d3436">O</text>
+                </g>
+
+                <!-- Escala gráfica -->
+                <g transform="translate(50, 600)">
+                    <line x1="0" y1="0" x2="120" y2="0" class="escala-grafica"/>
+                    <line x1="0" y1="-8" x2="0" y2="8" class="escala-grafica"/>
+                    <line x1="40" y1="-5" x2="40" y2="5" class="escala-grafica"/>
+                    <line x1="80" y1="-5" x2="80" y2="5" class="escala-grafica"/>
+                    <line x1="120" y1="-8" x2="120" y2="8" class="escala-grafica"/>
+                    <text x="0" y="25" font-size="11px" fill="#2d3436">0</text>
+                    <text x="35" y="25" font-size="11px" fill="#2d3436">25km</text>
+                    <text x="75" y="25" font-size="11px" fill="#2d3436">50km</text>
+                    <text x="110" y="25" font-size="11px" fill="#2d3436">75km</text>
+                </g>
+
+                <!-- Coordenadas -->
+                <text x="20" y="690" class="coordenadas">4°N - 6°N, 75°O - 76°O</text>
+                <text x="850" y="690" class="coordenadas">Proyección: WGS84</text>
+
+                <!-- Info box -->
+                <g transform="translate(750, 500)">
+                    <rect x="0" y="0" width="200" height="140" class="info-box" rx="5"/>
+                    <text x="10" y="20" font-size="12px" fill="#2d3436" font-weight="bold">INFORMACIÓN REGIONAL</text>
+                    <text x="10" y="40" font-size="10px" fill="#636e72">• Área total: ~13,873 km²</text>
+                    <text x="10" y="55" font-size="10px" fill="#636e72">• Población: ~2.3 millones hab.</text>
+                    <text x="10" y="70" font-size="10px" fill="#636e72">• Altitud: 1,000 - 2,200 msnm</text>
+                    <text x="10" y="85" font-size="10px" fill="#636e72">• Clima: Tropical de montaña</text>
+                    <text x="10" y="100" font-size="10px" fill="#636e72">• Principal actividad: Café</text>
+                    <text x="10" y="115" font-size="10px" fill="#636e72">• UNESCO: Paisaje Cultural</text>
+                    <text x="10" y="130" font-size="10px" fill="#636e72">  Cafetero (2011)</text>
+                </g>
+            </svg>
+
+            <div class="leyenda">
+                <div class="leyenda-item">
+                    <div class="leyenda-color" style="background-color: #4ecdc4; border-color: #00b894;"></div>
+                    <span><strong>Risaralda</strong> - Pereira (Alpina)</span>
+                </div>
+                <div class="leyenda-item">
+                    <div class="leyenda-color" style="background-color: #000000; border-color: #000000;"></div>
+                    <span><strong>Quindío</strong> - Armenia (Polar)</span>
+                </div>
+                <div class="leyenda-item">
+                    <div class="leyenda-color" style="background-color: #fdcb6e; border-color: #e17055;"></div>
+                    <span><strong>Caldas</strong> - Manizales (Zenú & Fleischmann)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Efectos interactivos
+        document.querySelectorAll('.ciudad-punto').forEach(punto => {
+            punto.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 1.5s infinite';
+                this.style.transformOrigin = 'center';
+            });
+            
+            punto.addEventListener('mouseleave', function() {
+                this.style.animation = 'none';
+            });
+        });
+
+        document.querySelectorAll('.departamento').forEach(depto => {
+            depto.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.transformOrigin = 'center';
+            });
+            
+            depto.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Animaciones CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.3); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+    </section>
 
 
 <div class="footer">
