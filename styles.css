@@ -997,3 +997,123 @@ body { font-family: 'Poppins', sans-serif; }
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ===== Sección Aliados Mejorada ===== */
+.aliados-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  max-width: 1200px;
+  margin: 3rem auto;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.aliados-glass h2 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid adaptable */
+.aliados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Tarjetas de Aliados */
+.aliado-card {
+  background: white;
+  padding: 1.2rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  width: 180px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo */
+.aliado-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.aliado-card img {
+  max-width: 100px;
+  max-height: 70px;
+  margin-bottom: 0.7rem;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.aliado-card p {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.aliado-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.aliado-card:hover::after {
+  opacity: 1;
+}
+
+.aliado-card:hover img {
+  transform: scale(1.15);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .aliados-glass {
+    padding: 2rem 1rem;
+  }
+
+  .aliados-glass h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .aliados-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .aliado-card {
+    width: 150px;
+    padding: 1rem;
+  }
+
+  .aliado-card img {
+    max-width: 90px;
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aliados-grid {
+    grid-template-columns: 1fr;
+  }
+}
