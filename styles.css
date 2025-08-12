@@ -1117,3 +1117,26 @@ body { font-family: 'Poppins', sans-serif; }
     grid-template-columns: 1fr;
   }
 }
+  #contacto {
+    padding: 40px 20px;
+  }
+  #contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #contacto .contacto-info {
+    margin-bottom: 20px;zx <
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  #contacto .contacto-info a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  #contacto .contacto-info a:hover {
+    text-decoration: underline;
+  }
+  #contacto .contacto-mapa iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
