@@ -1,443 +1,297 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>TYM</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYM - Tiendas y Marcas del Eje Cafetero</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
-<body class="tym-bg colorful-bg">
+<body>
 
-<nav class="navbar">
-  <img src="logo_tym.png" class="logo" alt="Logo TYM">
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-    <li><a href="#productos">Productos</a></li>
-    <li><a href="#aliados">Aliados</a></li>
-    <li><a href="#capacitaciones">Capacitaciones</a></li>
-    <li><a href="#nomina">Nómina</a></li>
-    <li><a href="#Cobertura">Cobertura</a></li>
-    <li><a href="#peticiones">Solicitudes</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+<header class="hero-section">
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo_tym.png" class="logo" alt="Logo TYM">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#aliados">Aliados</a></li>
+            <li><a href="#capacitaciones">Capacitaciones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Abrir menú de navegación">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
 
-</nav>
-
-<section id="inicio" class="section glass">
-  <h2>Bienvenido a TYM</h2>
-  <p>Conectando marcas con el Eje Cafetero.</p>
-</section>
-
-<section id="nosotros" class="section glass">
-  <h2 class="titulo-historia"> Historia al pasar los años</h2>
-
-  <div class="barra-años">
-    <button onclick="mostrarEvento('2016')">2016</button>
-    <button onclick="mostrarEvento('2017')">2017</button>
-    <button onclick="mostrarEvento('2018')">2018</button>
-    <button onclick="mostrarEvento('2019')">2019</button>
-    <button onclick="mostrarEvento('2020')">2020</button>
-    <button onclick="mostrarEvento('2021')">2021</button>
-    <button onclick="mostrarEvento('2022')">2022 / 23</button>
-    <button onclick="mostrarEvento('2024')">2024</button>
-  </div>
-
-  <div class="contenedor-eventos">
-    <div class="evento" id="evento-2016">
-      <h3>2016 - Se funda T&M del Eje Cafetero</h3>
-      <p>Operación en Pereira con bodega.<br>Proveedor: Alpina - $2.400 MM</p>
+    <div class="hero-content">
+        <h1>Conectando Marcas con el Eje Cafetero</h1>
+        <p>Tu aliado estratégico en distribución y logística, impulsando el crecimiento de tu negocio.</p>
+        <a href="#contacto" class="cta-button">Contáctanos</a>
     </div>
+</header>
 
-    <div class="evento" id="evento-2017">
-      <h3>2017 - Apertura Bodega Manizales</h3>
-      <p>Operación descentralizada en Manizales<br>Ubicada en el sector de Maltería<br>1.150 m²</p>
-    </div>
-
-    <div class="evento" id="evento-2018">
-      <h3>2018 - Apertura Bodega Armenia</h3>
-      <p>Para atender el Quindío<br>Ubicada en la vía el Edén<br>1.200 m²</p>
-    </div>
-
-    <div class="evento" id="evento-2019">
-      <h3>2019 - Consolidación territorios Alpina</h3>
-      <p>Alpina desmonta fuerza de ventas del TAT y Tiendas y Marcas la retoma</p>
-    </div>
-
-    <div class="evento" id="evento-2020">
-      <h3>2020 - Nueva Realidad</h3>
-      <p>Ajustes de modelos en operaciones<br>Estabilización y solo -1.4% en ventas</p>
-    </div>
-
-    <div class="evento" id="evento-2021">
-      <h3>2021 - Buscar Crecimientos</h3>
-      <p>Renovación de talento<br>Trabajo con la gente<br>Focalizar esfuerzos<br>Nuevos proveedores<br>Proceso comercial</p>
-    </div>
-
-    <div class="evento" id="evento-2022">
-      <h3>2022 / 23 - Fortalecer y Expandir</h3>
-      <p>Tecnología<br>Nuevos procesos<br>Creación de TAT<br>Fortalecimiento de la comercial</p>
-    </div>
-
-    <div class="evento" id="evento-2024">
-      <h3>2024 - Reingeniería</h3>
-      <p>Unificar TAT y T&M en una sola bodega en Pereira<br>Buscar otros ingresos<br>Otro proveedor líder<br>Productividad</p>
-    </div>
-  </div>
-</section>
-
-<script>
- 
-  function mostrarEvento(anio) {
-    const eventos = document.querySelectorAll('.evento');
-    eventos.forEach(e => {
-      e.classList.remove('active');
-    });
-
-    const buttons = document.querySelectorAll('.barra-años button');
-    buttons.forEach(btn => {
-      btn.classList.remove('active');
-    });
-
-    const target = document.getElementById('evento-' + anio.replace(' / ', ''));
-    if (target) target.classList.add('active');
-
-    const activeButton = Array.from(buttons).find(b => b.textContent.includes(anio));
-    if (activeButton) activeButton.classList.add('active');
-  }
-
-  mostrarEvento('2016');
-
-
-</script>
-
-
-<section id="productos" class="section glass">
-  <h2>Productos</h2>
-  <div class="cards">
-    <div class="card">Producto 1</div>
-    <div class="card">Producto 2</div>
-    <div class="card">Producto 3</div>
-  </div>
-</section>
-
-<section id="aliados" class="section aliados-glass">
-  <h2>Aliados</h2>
-  <div class="aliados-grid">
-    <div class="aliado-card">
-      <img src="logos/zenu.png" alt="Zenu">
-      <p>Zenu</p>
-    </div>
-    <div class="aliado-card">
-      <img src="logos/polar.png" alt="Polar">
-      <p>Polar</p>
-    </div>
-    <div class="aliado-card">
-      <img src="logos/alpina.png" alt="Alpina">
-      <p>Alpina</p>
-    </div>
-    <div class="aliado-card">
-      <img src="logos/fleischmann.png" alt="Fleischmann">
-      <p>Fleischmann</p>
-    </div>
-  </div>
-</section>
-
-
-<section id="capacitaciones" class="section glass">
-  <h2>Capacitaciones</h2>
-  <p>Explora nuestros cursos y talleres para formación continua.</p>
-  <a href="https://tulink.com/capacitaciones" class="btn-capacitacion" target="_blank">Ir a Capacitaciones</a>
-</section>
-
-<section id="nomina" class="section glass">
-  <h2>Conoce tu Nómina</h2>
-  <p>Consulta tus pagos y reportes laborales aquí:</p>
-  <a href="https://distri.tu-nomina.com/index.php/inicio" class="btn-nomina" target="_blank">Ir a plataforma</a>
-</section>
-   <section id="peticiones" class="section glass">
-        <h2>Solicitudes y constancias</h2>
-        <p>Solicita aquí tu carta laboral, constancia o documento necesario. Te contactaremos al correo que indiques.</p>
-   
-
-    <section id="peticiones">
-       
-        
-        <form action="https://formspree.io/f/xgvzaqby" method="POST" id="form-peticiones">
-            
-            <!-- Campo honeypot anti-spam (oculto) -->
-            <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
-            
-            <div class="form-group">
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Tu correo electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="tipo">Tipo de solicitud:</label>
-                <select id="tipo" name="tipo" required>
-                    <option value="">Selecciona el tipo de solicitud</option>
-                    <option value="carta-laboral">Carta laboral</option>
-                    <option value="constancia-ingresos">Constancia de ingresos</option>
-                    <option value="certificado-trabajo">Certificado de trabajo</option>
-                    <option value="constancia-afiliacion">Constancia de afiliación</option>
-                    <option value="otros">Otros</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Información adicional o detalles:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Describe los detalles específicos de tu solicitud, fechas necesarias, o cualquier información adicional..." required></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="telefono">Teléfono de contacto (opcional):</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
-            </div>
-            
-            <!-- Campos ocultos mejorados -->
-            <input type="hidden" name="_subject" value="Nueva solicitud TYM - Peticiones y Constancias">
-            <input type="hidden" name="_autoresponse" value="Hemos recibido tu solicitud correctamente. Nos pondremos en contacto contigo pronto. - Equipo TYM">
-            <!-- Eliminado el _cc redundante -->
-            <!-- Mejorada la redirección -->
-            <input type="hidden" name="_next" value="javascript:void(0)">
-            
-            <button type="submit" id="btn-submit" class="btn-enviar">
-                <span id="btn-text">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="m22 2-7 20-4-9-9-4 20-7z"/>
-                    </svg>
-                    Enviar Solicitud
-                </span>
-                <span id="btn-loading" style="display: none;">
-                    <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="m12 6-4 6 4 6"/>
-                    </svg>
-                    Enviando...
-                </span>
-            </button>
-        </form>
-        
-        <!-- Mensajes de estado -->
-        <div id="mensaje-exito" class="mensaje-estado exito" style="display: none;">
-            <div class="mensaje-icono">✅</div>
-            <div class="mensaje-contenido">
-                <strong>¡Solicitud enviada correctamente!</strong>
-                <p>Hemos recibido tu solicitud. Te contactaremos al correo <strong id="email-confirmacion"></strong> en las próximas horas.</p>
+<main>
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <p class="section-subtitle">Trayectoria y evolución de Tiendas y Marcas del Eje Cafetero.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2016 - Fundación</h3>
+                        <p>Se funda T&M del Eje Cafetero en Pereira, iniciando operaciones con Alpina. ¡Nace nuestro sueño!</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2017 - Expansión a Manizales</h3>
+                        <p>Apertura de una nueva bodega de 1.150 m² en el sector de Maltería para descentralizar las operaciones.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2018 - Llegada a Armenia</h3>
+                        <p>Apertura de nuestra tercera bodega en la Vía El Edén, consolidando nuestra presencia en el Quindío.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2019 - Consolidación con Alpina</h3>
+                        <p>Asumimos la fuerza de ventas del TAT de Alpina, fortaleciendo nuestra relación comercial y ampliando nuestra red.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2020 - Adaptación y Crecimiento</h3>
+                        <p>Ajustamos nuestros modelos operativos frente a la nueva realidad, logrando una estabilización de ventas.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2021 - Búsqueda de Crecimientos</h3>
+                        <p>Renovación de talento y búsqueda de nuevos proveedores para seguir expandiendo nuestro portafolio de servicios.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2022 / 2023 - Fortalecimiento y Expansión</h3>
+                        <p>Inversión en tecnología y nuevos procesos, y fortalecimiento de nuestro equipo comercial.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2024 - Reingeniería Estratégica</h3>
+                        <p>Unificación de operaciones en una sola bodega en Pereira para optimizar la productividad y buscar nuevas oportunidades de negocio.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div id="mensaje-error" class="mensaje-estado error" style="display: none;">
-            <div class="mensaje-icono">❌</div>
-            <div class="mensaje-contenido">
-                <strong>Error al enviar la solicitud</strong>
-                <p>No se pudo procesar tu solicitud. Por favor intenta nuevamente o contacta directamente a <a href="mailto:juanjosecolorado266@gmail.com">juanjosecolorado266@gmail.com</a></p>
+    </section>
+    
+    <section id="productos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-subtitle">Conoce las categorías de productos que distribuimos con pasión.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <i class="fas fa-cheese icon"></i>
+                    <h3>Lácteos y Derivados</h3>
+                    <p>Variedad de quesos, yogures y productos lácteos frescos.</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-bread-slice icon"></i>
+                    <h3>Panadería y Repostería</h3>
+                    <p>Ingredientes y productos clave para el mundo de la panadería.</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-hotdog icon"></i>
+                    <h3>Cárnicos y Embutidos</h3>
+                    <p>Productos de alta calidad para satisfacer todos los gustos.</p>
+                </div>
             </div>
-        </div>
-        
-        <!-- Información adicional -->
-        <div class="info-adicional">
-            <h3>📋 Información importante:</h3>
-            <ul>
-                <li><strong>Tiempo de respuesta:</strong> 24-48 horas hábiles</li>
-                <li><strong>Documentos digitales:</strong> Se envían por correo electrónico</li>
-                <li><strong>Consultas:</strong> Puedes escribir directamente a juanjosecolorado266@gmail.com</li>
-                <li><strong>Horario de atención:</strong> Lunes a viernes de 8:00 AM a 6:00 PM</li>
-            </ul>
         </div>
     </section>
 
-    <script>
-        document.getElementById('form-peticiones').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevenir envío tradicional
-            
-            const btnSubmit = document.getElementById('btn-submit');
-            const btnText = document.getElementById('btn-text');
-            const btnLoading = document.getElementById('btn-loading');
-            const mensajeExito = document.getElementById('mensaje-exito');
-            const mensajeError = document.getElementById('mensaje-error');
-            const emailInput = document.getElementById('email');
-            const emailConfirmacion = document.getElementById('email-confirmacion');
-            
-            // Verificar campo honeypot
-            const honeypot = this.querySelector('input[name="_gotcha"]');
-            if (honeypot.value) {
-                // Probable spam, no enviar
-                return false;
-            }
-            
-            // Ocultar mensajes anteriores
-            mensajeExito.style.display = 'none';
-            mensajeError.style.display = 'none';
-            
-            // Mostrar estado de carga
-            btnSubmit.disabled = true;
-            btnSubmit.classList.add('loading');
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'flex';
-            
-            const formData = new FormData(this);
-            
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Éxito
-                    emailConfirmacion.textContent = emailInput.value;
-                    mensajeExito.style.display = 'flex';
-                    this.reset(); // Limpiar formulario
-                    
-                    // Scroll suave al mensaje
-                    setTimeout(() => {
-                        mensajeExito.scrollIntoView({ 
-                            behavior: 'smooth', 
-                            block: 'center' 
-                        });
-                    }, 100);
-                } else {
-                    return response.json().then(data => {
-                        throw new Error(data.error || 'Error en el envío');
-                    });
-                }
-            })
-            .catch(error => {
-                // Error
-                console.error('Error:', error);
-                mensajeError.style.display = 'flex';
-                
-                setTimeout(() => {
-                    mensajeError.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'center' 
-                    });
-                }, 100);
-            })
-            .finally(() => {
-                // Restaurar botón
-                btnSubmit.disabled = false;
-                btnSubmit.classList.remove('loading');
-                btnText.style.display = 'flex';
-                btnLoading.style.display = 'none';
-            });
-        });
+    <section id="aliados" class="section">
+        <div class="container">
+            <h2 class="section-title">Marcas Aliadas</h2>
+            <p class="section-subtitle">Trabajamos con las marcas líderes de la industria.</p>
+            <div class="aliados-grid">
+                <div class="aliado-card">
+                    <img src="logos/alpina.png" alt="Logo Alpina">
+                </div>
+                <div class="aliado-card">
+                    <img src="logos/zenu.png" alt="Logo Zenu">
+                </div>
+                <div class="aliado-card">
+                    <img src="logos/polar.png" alt="Logo Polar">
+                </div>
+                <div class="aliado-card">
+                    <img src="logos/fleischmann.png" alt="Logo Fleischmann">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Validación en tiempo real del email
-        document.getElementById('email').addEventListener('input', function() {
-            const email = this.value;
-            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-            
-            if (email && !isValid) {
-                this.setCustomValidity('Por favor ingresa un correo electrónico válido');
-            } else {
-                this.setCustomValidity('');
-            }
-        });
+    <section id="capacitaciones" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Capacitaciones</h2>
+            <p class="section-subtitle">Explora nuestros cursos y talleres para formación continua y profesional.</p>
+            <a href="https://tulink.com/capacitaciones" class="btn-primary" target="_blank">
+                <i class="fas fa-graduation-cap"></i> Ir a Capacitaciones
+            </a>
+        </div>
+    </section>
 
-        // Autoexpandir textarea
-        document.getElementById('message').addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = this.scrollHeight + 'px';
-        });
+    <section id="nomina" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Consulta tu Nómina</h2>
+            <p class="section-subtitle">Accede a tu plataforma personal para consultar pagos y reportes laborales.</p>
+            <a href="https://distri.tu-nomina.com/index.php/inicio" class="btn-primary" target="_blank">
+                <i class="fas fa-file-invoice-dollar"></i> Ir a plataforma
+            </a>
+        </div>
+    </section>
 
-        // Limpiar honeypot si se llena accidentalmente
-        document.querySelector('input[name="_gotcha"]').addEventListener('input', function() {
-            this.value = '';
-        });
-    </script>
+    <section id="peticiones" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Solicitudes y Constancias</h2>
+            <p class="section-subtitle">Llena este formulario para solicitar tu carta laboral, constancia o documento necesario.</p>
+            <form action="https://formspree.io/f/xgvzaqby" method="POST" class="form-modern">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">Tu correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de solicitud</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecciona el tipo de solicitud</option>
+                        <option value="carta-laboral">Carta laboral</option>
+                        <option value="constancia-ingresos">Constancia de ingresos</option>
+                        <option value="certificado-trabajo">Certificado de trabajo</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Información adicional o detalles</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Describe los detalles específicos de tu solicitud..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                </button>
+            </form>
+        </div>
+    </section>
 
-<section id="Cobertura" class="section glass">
-  <h2>Mapa de Cobertura TYM</h2>
-  <div class="mapa-container">
-    <svg class="svg-mapa" width="100%" height="600px" viewBox="0 0 600 600">
-      <!-- Mapa simplificado -->
-      <path id="quindio" class="departamento"
-            d="M200,300 L260,280 L280,320 L230,360 L180,340 Z" fill="#ddd" stroke="#666"/>
-      <text x="225" y="310" class="texto-depto">Quindío</text>
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos listos para atenderte y resolver tus dudas.</p>
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Carrera 16 Nº 77 - 00, Intersección La Romelia</p>
+                    <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:+573146668998">314 666 8998</a></p>
+                    <p><i class="fas fa-building"></i> <strong>Empresa:</strong> Tiendas y Marcas del Eje Cafetero</p>
+                    <p><i class="fas fa-city"></i> <strong>Ciudad:</strong> Dosquebradas, Risaralda</p>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.319760927918!2d-75.64299838573752!3d4.85191564264366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3524b17f8b9e65%3A0x6d90048d0a3d6666!2sCarrera%2016%20%2377-00%2C%20Dosquebradas%2C%20Risaralda%2C%20Colombia!5e0!3m2!1sen!2sus!4v1689262142279!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-      <path id="risaralda" class="departamento"
-            d="M260,240 L320,220 L350,260 L300,300 L260,260 Z" fill="#ddd" stroke="#666"/>
-      <text x="295" y="250" class="texto-depto">Risaralda</text>
-
-      <path id="caldas" class="departamento"
-            d="M320,300 L380,280 L410,330 L360,380 L320,340 Z" fill="#ddd" stroke="#666"/>
-      <text x="355" y="310" class="texto-depto">Caldas</text>
-
-      <path id="nortevalle" class="departamento"
-            d="M180,380 L240,360 L260,420 L210,460 L170,430 Z" fill="#ddd" stroke="#666"/>
-      <text x="215" y="390" class="texto-depto">Norte del Valle</text>
-    </svg>
-
-    <div class="info-box" id="info-box">
-      <h3>Haz clic en un departamento</h3>
-      <p>Aquí aparecerán las marcas que atendemos.</p>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 TYM. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
     </div>
-  </div>
+</footer>
 
-  <style>
-    .mapa-container { display: flex; gap: 20px; align-items: flex-start; }
-    .departamento { cursor: pointer; transition: fill 0.3s; }
-    .departamento:hover { fill: #a8dadc; }
-    .selected { fill: #457b9d !important; }
-    .texto-depto { font-family: sans-serif; font-size: 14px; pointer-events: none; }
-    .info-box { width: 250px; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .info-box h3 { margin-top: 0; }
-  </style>
+<script>
+    // Script para la funcionalidad del menú móvil
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-  <script>
-    const infoData = {
-      quindio: { nombre: "Quindío", marcas: ["ALPINA","FLEISCHMANN","POLAR"] },
-      risaralda: { nombre: "Risaralda", marcas: ["ALPINA","FLEISCHMANN","ZENU"] },
-      caldas: { nombre: "Caldas", marcas: ["ALPINA","FLEISCHMANN","POLAR"] },
-      nortevalle: { nombre: "Norte del Valle", marcas: ["ALPINA","ZENU"] }
-    };
-
-    const infoBox = document.getElementById("info-box");
-    document.querySelectorAll(".departamento").forEach(el => {
-      el.addEventListener("click", () => {
-        document.querySelectorAll(".departamento").forEach(d => d.classList.remove("selected"));
-        el.classList.add("selected");
-        const data = infoData[el.id];
-        infoBox.innerHTML = `
-          <h3>${data.nombre}</h3>
-          <ul>${data.marcas.map(m => `<li>${m}</li>`).join("")}</ul>
-        `;
-      });
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
     });
-  </script>
-<section id="contacto" class="section glass">
-  <h2>Contacto</h2>
-  <div class="contacto-info">
-    <p><strong>📍 Dirección:</strong> Carrera 16 Nº 77 - 00, Intersección La Romelia (Enseguida de La Fiscalía)</p>
-    <p><strong>🏢 Empresa:</strong> Tiendas y Marcas del Eje Cafetero</p>
-    <p><strong>📞 Teléfono:</strong> <a href="tel:3146668998">314 666 8998</a></p>
-    <p><strong>📌 Ciudad:</strong> Dosquebradas, Risaralda</p>
-  </div>
 
-  <div class="contacto-mapa">
-    <iframe 
-      src="https://www.google.com/maps?q=Carrera%2016%20Nº%2077-00%20Dosquebradas%20Risaralda&output=embed" 
-      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-  </div>
-</section>
+    // Script para cerrar el menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
 
+    // Cambiar la clase de la navbar al hacer scroll
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
 
+</script>
+<script>
+    const map = L.map('mapa').setView([4.8133, -75.6961], 10);
 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-<div class="footer">
-  © 2025 TYM. Todos los derechos reservados | <a href="index.html">Volver a inicio</a>
-</div>
+    // Marcadores de ejemplo por municipio
+    L.marker([4.8133, -75.6961]).addTo(map)
+        .bindPopup('<b>Pereira</b><br>Cobertura disponible.');
 
+    L.marker([4.8211, -75.7538]).addTo(map)
+        .bindPopup('<b>Dosquebradas</b><br>Cobertura disponible.');
+
+    // Añade más marcadores para cada municipio
+</script>
 </body>
 </html>
