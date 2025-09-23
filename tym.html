@@ -27,6 +27,7 @@
             <li><a href="#aliados">Aliados</a></li>
             <li><a href="#capacitaciones">Capacitaciones</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#cobertura">Cobertura</a></li>
         </ul>
         <button class="menu-toggle" aria-label="Abrir menú de navegación">
             <span class="bar"></span>
@@ -229,10 +230,76 @@
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+                    
+                    
                 </div>
             </div>
         </div>
     </section>
+    <section id="cobertura" class="section">
+    <div class="container">
+        <div class="section-content text-center">
+            <h2>Nuestra Cobertura</h2>
+            <p class="section-subtitle">
+                Descubre nuestra amplia red de distribución y las marcas líderes que llevamos a tu negocio. 
+            </p>
+        </div>
+        <div class="map-container-section">
+            <div class="map-details">
+                
+                <p>Distribuimos productos de alta calidad en todo el Eje Cafetero, llevando directamente a tu negocio las mejores marcas del mercado.</p>
+                
+                <div class="coverage-list">
+                    <h4>Marcas por Región:</h4>
+                    
+                    <div class="coverage-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Quindío</h5>
+                        <ul>
+                            <li>ALPINA</li>
+                            <li>FLEISCHMANN</li>
+                            <li>POLAR</li>
+                        </ul>
+                    </div>
+
+                    <div class="coverage-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Caldas</h5>
+                        <ul>
+                            <li>ALPINA</li>
+                            <li>POLAR</li>
+                            <li>FLEISCHMANN</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="coverage-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Risaralda</h5>
+                        <ul>
+                            <li>ALPINA</li>
+                            <li>FLEISCHMANN</li>
+                            <li>ZENU</li>
+                        </ul>
+                    </div>
+
+                    <div class="coverage-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Norte del Valle (Cartago, Alcalá, Ansermanuevo)</h5>
+                        <ul>
+                            <li>ALPINA</li>
+                            <li>ZENU</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           <div class="map-iframe">
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1s8TszExZ880VD91fUL9qVh3P7giq73E&ehbc=2E312F&noprof=1" width="640" height="480" allowfullscreen="" loading="lazy"></iframe>
+</div>
+                    <p>Haz clic para interactuar con el mapa.</p>
+                
+        </div>
+    </div>
+</section>
 </main>
 
 <footer class="footer">
@@ -277,21 +344,6 @@
     });
 
 </script>
-<script>
-    const map = L.map('mapa').setView([4.8133, -75.6961], 10);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Marcadores de ejemplo por municipio
-    L.marker([4.8133, -75.6961]).addTo(map)
-        .bindPopup('<b>Pereira</b><br>Cobertura disponible.');
-
-    L.marker([4.8211, -75.7538]).addTo(map)
-        .bindPopup('<b>Dosquebradas</b><br>Cobertura disponible.');
-
-    // Añade más marcadores para cada municipio
-</script>
 </body>
 </html>
