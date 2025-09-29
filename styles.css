@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
     font-size: 0.95rem; 
     color: var(--dark-color);
-    overflow-x: hidden;
+    overflow-x: hidden; /* Clave para evitar el scroll horizontal al animar */
 }
 
 h1 {
@@ -82,7 +82,6 @@ a:hover {
 }
 
 /* --- ESTILOS DE LA PÁGINA DE INICIO (index.html) --- */
-/* Este código es el correcto para tu archivo CSS */
 .landing-page-body {
     background-image:
         linear-gradient(-45deg,
@@ -92,7 +91,6 @@ a:hover {
             rgba(255,99,71,0.6)),
         url("fondo1.jpg"); 
     
-    /* Esta línea hace que la imagen se adapte a toda la pantalla */
     background-size: 300% 300%, cover;
     
     background-position: 0% 50%, center;
@@ -109,8 +107,6 @@ a:hover {
     text-align: center;
     overflow-x: hidden;
 }
-
-/* El resto de tu código CSS va aquí */
 
 /* Animación: SOLO mueve el gradiente, deja la imagen quieta */
 @keyframes gradientShift {
@@ -195,10 +191,15 @@ a:hover {
     padding: 0.8rem 2rem;
     background-color: transparent;
     z-index: 1000;
-    transition: background-color 0.4s ease, padding 0.4s ease;
+    
+    /* ANIMACIÓN DE DESLIZAMIENTO DE LA NAVBAR */
+    transform: translateY(-100%); /* Inicialmente oculta hacia arriba */
+    transition: background-color 0.4s ease, padding 0.4s ease, transform 0.5s ease-out;
 }
 
 .navbar.scrolled {
+    /* Muestra la navbar al hacer scroll */
+    transform: translateY(0);
     background-color: var(--white-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 0.4rem 2rem;
@@ -280,6 +281,8 @@ a:hover {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg-hero.jpg');
     background-size: cover;
     background-position: center;
+    /* EFECTO PARALAJE EN EL HERO */
+    background-attachment: fixed; 
     height: 80vh;
     display: flex;
     align-items: center;
@@ -340,6 +343,7 @@ a:hover {
     background-color: inherit;
     width: 50%;
     margin-bottom: 1.5rem;
+    opacity: 0; 
 }
 
 .timeline-item:nth-child(odd) {
@@ -392,6 +396,7 @@ a:hover {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; 
 }
 
 .product-card:hover, .aliado-card:hover {
@@ -408,15 +413,14 @@ a:hover {
 .aliado-card img {
     max-width: 100%;
     height: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter 0.3s ease, opacity 0.3s ease;
+    /* CÓDIGO CORREGIDO: SE ELIMINA EL GRUPO DE ESCALA DE GRISES Y OPACIDAD */
+    filter: none;
+    opacity: 1;
+    /* Aseguramos que la transición sea rápida */
+    transition: transform 0.3s ease; 
 }
 
-.aliado-card:hover img {
-    filter: grayscale(0);
-    opacity: 1;
-}
+/* Se elimina la regla de hover para aliado-card img para que siempre esté a color */
 
 /* Contacto y Formulario */
 .contact-grid {
@@ -454,6 +458,7 @@ a:hover {
     gap: 1rem;
     max-width: 500px;
     margin: 0 auto;
+    opacity: 0; 
 }
 
 .form-group label {
@@ -477,6 +482,8 @@ a:hover {
     box-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
 }
 
+/* ESTILOS DEL BOTÓN */
+/* ESTILOS DEL BOTÓN CORREGIDOS PARA CENTRADO ABSOLUTO */
 .btn-primary {
     background-color: var(--secondary-color);
     color: var(--white-color);
@@ -487,15 +494,17 @@ a:hover {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: center;
-    display: inline-block;
+    
+    /* CAMBIOS CLAVE PARA CENTRARLO COMO BLOQUE */
+    display: block; /* Cambia a elemento de bloque */
+    width: fit-content; /* El ancho se ajusta al contenido */
+    margin: 0 auto; /* Centra el bloque horizontalmente */
 }
 
 .btn-primary:hover {
     background-color: #d35400;
     transform: translateY(-2px);
 }
-
 /* Footer */
 .footer {
     background-color: var(--dark-color);
@@ -518,6 +527,7 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    opacity: 0; 
 }
 
 .social-links {
@@ -591,14 +601,16 @@ a:hover {
         display: flex;
     }
 
+    /* AJUSTE MÓVIL CRUCIAL PARA LA LÍNEA DE TIEMPO */
     .timeline::after {
-        left: 21px;
+        left: 21px; /* Mantiene la línea central a la izquierda */
     }
 
     .timeline-item {
-        width: 100%;
+        width: 100%; /* Ocupa todo el ancho */
         padding-left: 50px;
         padding-right: 15px;
+        left: 0 !important; /* Asegura que todos los ítems estén a la izquierda */
     }
     
     .timeline-item:nth-child(even) {
@@ -606,7 +618,8 @@ a:hover {
     }
 
     .timeline-dot {
-        left: 18px;
+        left: 14px; /* Mueve el punto al lado izquierdo de la línea */
+        right: auto;
     }
 
     .contact-grid {
@@ -662,6 +675,7 @@ a:hover {
     padding: 1rem 1.5rem;
     border-radius: 8px;
     margin-bottom: 1rem;
+    opacity: 0; 
 }
 
 .coverage-item h5 {
