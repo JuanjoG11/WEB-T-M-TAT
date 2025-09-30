@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
     font-size: 0.95rem; 
     color: var(--dark-color);
-    overflow-x: hidden; /* Clave para evitar el scroll horizontal al animar */
+    overflow-x: hidden;
 }
 
 h1 {
@@ -89,10 +89,9 @@ a:hover {
             rgba(0,198,255,0.6),
             rgba(255,165,0,0.6),
             rgba(255,99,71,0.6)),
-        url("fondo1.jpg"); 
+        url("fondo2.png"); 
     
-    background-size: 300% 300%, cover;
-    
+    background-size: 100% 100%, cover;
     background-position: 0% 50%, center;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
@@ -413,14 +412,10 @@ a:hover {
 .aliado-card img {
     max-width: 100%;
     height: auto;
-    /* CÓDIGO CORREGIDO: SE ELIMINA EL GRUPO DE ESCALA DE GRISES Y OPACIDAD */
     filter: none;
     opacity: 1;
-    /* Aseguramos que la transición sea rápida */
     transition: transform 0.3s ease; 
 }
-
-/* Se elimina la regla de hover para aliado-card img para que siempre esté a color */
 
 /* Contacto y Formulario */
 .contact-grid {
@@ -483,7 +478,6 @@ a:hover {
 }
 
 /* ESTILOS DEL BOTÓN */
-/* ESTILOS DEL BOTÓN CORREGIDOS PARA CENTRADO ABSOLUTO */
 .btn-primary {
     background-color: var(--secondary-color);
     color: var(--white-color);
@@ -495,29 +489,23 @@ a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     
-    /* CAMBIOS CLAVE PARA CENTRARLO COMO BLOQUE */
-    display: block; /* Cambia a elemento de bloque */
-    width: fit-content; /* El ancho se ajusta al contenido */
-    margin: 0 auto; /* Centra el bloque horizontalmente */
+    /* CORRECCIÓN PARA CENTRAR BOTONES EN SECCIONES DE TÍTULO */
+    display: block; 
+    width: fit-content;
+    margin: 0 auto; 
 }
 
 .btn-primary:hover {
     background-color: #d35400;
     transform: translateY(-2px);
 }
+
 /* Footer */
 .footer {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 1.5rem 0;
     text-align: center;
-}
-
-.section-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
 }
 
 .footer-content {
@@ -545,92 +533,6 @@ a:hover {
     color: var(--secondary-color);
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-    .welcome-container {
-        padding: 1.5rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
-    .brand-selection {
-        flex-direction: column;
-    }
-
-    .brand-card {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .navbar {
-        padding: 0.8rem 1rem;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.9);
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(100%);
-    }
-
-    .nav-links.active {
-        display: flex;
-        transform: translateX(0);
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    /* AJUSTE MÓVIL CRUCIAL PARA LA LÍNEA DE TIEMPO */
-    .timeline::after {
-        left: 21px; /* Mantiene la línea central a la izquierda */
-    }
-
-    .timeline-item {
-        width: 100%; /* Ocupa todo el ancho */
-        padding-left: 50px;
-        padding-right: 15px;
-        left: 0 !important; /* Asegura que todos los ítems estén a la izquierda */
-    }
-    
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-
-    .timeline-dot {
-        left: 14px; /* Mueve el punto al lado izquierdo de la línea */
-        right: auto;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-}
 /* --- Sección de Cobertura --- */
 .map-container-section {
     display: flex;
@@ -743,6 +645,7 @@ a:hover {
 }
 
 /* Media Queries para Responsividad */
+
 @media (max-width: 992px) {
     .map-container-section {
         flex-direction: column;
@@ -752,3 +655,187 @@ a:hover {
         padding-right: 0;
     }
 }
+
+
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 1.5rem;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .brand-selection {
+        flex-direction: column;
+    }
+
+    .brand-card {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    /* CORRECCIÓN CLAVE 1: Enlaces blancos sobre el menú oscuro */
+    .nav-links.active a {
+        color: var(--white-color) !important;
+    }
+
+    /* CORRECCIÓN CLAVE 2: Menú hamburguesa blanco sobre el menú oscuro */
+    .nav-links.active + .menu-toggle .bar {
+        background-color: var(--white-color) !important;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* AJUSTE MÓVIL PARA LA LÍNEA DE TIEMPO */
+    .timeline::after {
+        left: 21px; 
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 15px;
+        left: 0 !important; 
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-dot {
+        left: 14px; 
+        right: auto;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+/* Animación para revelar elementos al hacer scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in-up {
+    animation: fadeInUp 0.8s ease forwards;
+}
+.fade-in-up-delay-1 {
+    animation-delay: 0.2s;
+}
+.fade-in-up-delay-2 {
+    animation-delay: 0.4s;
+}
+.fade-in-up-delay-3 {
+    animation-delay: 0.6s;
+}
+.fade-in-up-delay-4 {
+    animation-delay: 0.8s;
+}
+.fade-in-up-delay-5 {
+    animation-delay: 1s;
+}
+.fade-in-up-delay-6 {
+    animation-delay: 1.2s;
+}
+.fade-in-up-delay-7 {
+    animation-delay: 1.4s;
+}
+.fade-in-up-delay-8 {
+    animation-delay: 1.6s;
+}
+.fade-in-up-delay-9 {
+    animation-delay: 1.8s;
+}
+.fade-in-up-delay-10 {
+    animation-delay: 2s;
+}
+/* Clase para elementos ya visibles */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/* Clase para elementos ocultos */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+
+    }
+}
+/* --- ESTILO PARA EL BOTÓN VOLVER A EMPRESAS (Desktop y Móvil) --- */
+
+.btn-home {
+    background-color: var(--secondary-color); /* Naranja, para que destaque */
+    color: var(--white-color) !important; /* El !important asegura que sea visible */
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    
+    /* SOLUCIÓN CLAVE para anular el estilo de línea del menú */
+    text-decoration: none !important; 
+}
+
+.btn-home:hover {
+    background-color: #d35400; /* Tono de naranja más oscuro al pasar el ratón */
+}
+
+/* 1. ANULA la línea de subrayado de los enlaces del menú normal */
+.btn-home::after {
+    display: none !important;
+}
+
+/* 2. Asegura que el color se mantenga si la navbar está scrolled (Desktop) */
+.navbar.scrolled .btn-home {
+    color: var(--white-color) !important; 
+    background-color: var(--secondary-color);
+}
+
+
