@@ -1,11 +1,11 @@
 /* Variables de Colores */
 :root {
-    --primary-color: #2980b9; /* Azul medio para elementos principales y enlaces */
-    --secondary-color: #e67e22; /* Naranja vibrante para acentos y botones */
-    --light-color: #ecf0f1; /* Gris claro para fondos de secciones */
-    --dark-color: #2c3e50; /* Azul oscuro para texto */
-    --white-color: #ffffff; /* Blanco */
-    --gray-text: #95a5a6; /* Gris para texto secundario */
+    --primary-color: #2980b9; 
+    --secondary-color: #e67e22; 
+    --light-color: #ecf0f1; 
+    --dark-color: #2c3e50; 
+    --white-color: #ffffff; 
+    --gray-text: #95a5a6; 
 }
 
 /* Reset y Tipografía */
@@ -192,7 +192,7 @@ a:hover {
     z-index: 1000;
     
     /* ANIMACIÓN DE DESLIZAMIENTO DE LA NAVBAR */
-    transform: translateY(-100%); /* Inicialmente oculta hacia arriba */
+    transform: translateY(-100%); 
     transition: background-color 0.4s ease, padding 0.4s ease, transform 0.5s ease-out;
 }
 
@@ -644,7 +644,92 @@ a:hover {
     pointer-events: none;
 }
 
-/* Media Queries para Responsividad */
+/* --- ESTILO PARA EL BOTÓN VOLVER A EMPRESAS (Desktop y Móvil) --- */
+.btn-home {
+    background-color: var(--secondary-color); 
+    color: var(--white-color) !important; 
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    
+    /* SOLUCIÓN CLAVE para anular el estilo de línea del menú */
+    text-decoration: none !important; 
+}
+
+.btn-home:hover {
+    background-color: #d35400; 
+}
+
+/* 1. ANULA la línea de subrayado de los enlaces del menú normal */
+.btn-home::after {
+    display: none !important;
+}
+
+/* 2. Asegura que el color se mantenga si la navbar está scrolled (Desktop) */
+.navbar.scrolled .btn-home {
+    color: var(--white-color) !important; 
+    background-color: var(--secondary-color);
+}
+
+/* --- Animación para revelar elementos al hacer scroll (Global) --- */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in-up {
+    animation: fadeInUp 0.8s ease forwards;
+}
+.fade-in-up-delay-1 {
+    animation-delay: 0.2s;
+}
+.fade-in-up-delay-2 {
+    animation-delay: 0.4s;
+}
+.fade-in-up-delay-3 {
+    animation-delay: 0.6s;
+}
+.fade-in-up-delay-4 {
+    animation-delay: 0.8s;
+}
+.fade-in-up-delay-5 {
+    animation-delay: 1s;
+}
+.fade-in-up-delay-6 {
+    animation-delay: 1.2s;
+}
+.fade-in-up-delay-7 {
+    animation-delay: 1.4s;
+}
+.fade-in-up-delay-8 {
+    animation-delay: 1.6s;
+}
+.fade-in-up-delay-9 {
+    animation-delay: 1.8s;
+}
+.fade-in-up-delay-10 {
+    animation-delay: 2s;
+}
+/* Clase para elementos ya visibles */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/* Clase para elementos ocultos */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+/* --- Media Queries para Responsividad --- */
 
 @media (max-width: 992px) {
     .map-container-section {
@@ -658,28 +743,44 @@ a:hover {
 
 
 @media (max-width: 768px) {
-    .welcome-container {
-        padding: 1.5rem;
+    /* CORRECCIÓN DE ESPACIO BLANCO EN MÓVIL (INDEX.HTML) */
+    body {
+        min-height: 100vh;
+        height: -webkit-fill-available; 
+        height: fill-available;
     }
 
+    .landing-page-body {
+        height: auto; 
+        min-height: 100vh; /* Asegura que cubra al menos la altura visible */
+        padding: 3rem 0; 
+    }
+    /* FIN CORRECCIÓN ESPACIO BLANCO */
+
+    .welcome-container {
+        padding: 1.5rem; 
+        width: 90%; 
+        max-width: 400px;
+    }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .brand-selection {
         flex-direction: column;
+        gap: 1rem;
     }
 
     .brand-card {
         width: 100%;
-        max-width: 250px;
+        max-width: 180px;
     }
-
+    
     h2 {
         font-size: 1.8rem;
     }
@@ -752,90 +853,4 @@ a:hover {
         flex-direction: column;
         gap: 0.8rem;
     }
-
-/* Animación para revelar elementos al hacer scroll */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
-.fade-in-up {
-    animation: fadeInUp 0.8s ease forwards;
-}
-.fade-in-up-delay-1 {
-    animation-delay: 0.2s;
-}
-.fade-in-up-delay-2 {
-    animation-delay: 0.4s;
-}
-.fade-in-up-delay-3 {
-    animation-delay: 0.6s;
-}
-.fade-in-up-delay-4 {
-    animation-delay: 0.8s;
-}
-.fade-in-up-delay-5 {
-    animation-delay: 1s;
-}
-.fade-in-up-delay-6 {
-    animation-delay: 1.2s;
-}
-.fade-in-up-delay-7 {
-    animation-delay: 1.4s;
-}
-.fade-in-up-delay-8 {
-    animation-delay: 1.6s;
-}
-.fade-in-up-delay-9 {
-    animation-delay: 1.8s;
-}
-.fade-in-up-delay-10 {
-    animation-delay: 2s;
-}
-/* Clase para elementos ya visibles */
-.visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-/* Clase para elementos ocultos */
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-
-    }
-}
-/* --- ESTILO PARA EL BOTÓN VOLVER A EMPRESAS (Desktop y Móvil) --- */
-
-.btn-home {
-    background-color: var(--secondary-color); /* Naranja, para que destaque */
-    color: var(--white-color) !important; /* El !important asegura que sea visible */
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: 700;
-    
-    /* SOLUCIÓN CLAVE para anular el estilo de línea del menú */
-    text-decoration: none !important; 
-}
-
-.btn-home:hover {
-    background-color: #d35400; /* Tono de naranja más oscuro al pasar el ratón */
-}
-
-/* 1. ANULA la línea de subrayado de los enlaces del menú normal */
-.btn-home::after {
-    display: none !important;
-}
-
-/* 2. Asegura que el color se mantenga si la navbar está scrolled (Desktop) */
-.navbar.scrolled .btn-home {
-    color: var(--white-color) !important; 
-    background-color: var(--secondary-color);
-}
-
-
