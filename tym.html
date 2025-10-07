@@ -29,7 +29,7 @@
             <li><a href="#productos">Productos</a></li>
             <li><a href="#aliados">Aliados</a></li>
             <li><a href="#capacitaciones">Capacitaciones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#trabaja-con-nosotros">Empleo</a></li> <li><a href="#contacto">Contacto</a></li>
             <li><a href="#cobertura">Cobertura</a></li>
             <li><a href="index.html" class="btn-home"><i class="fas fa-home"></i> Volver</a></li>
         </ul>
@@ -183,7 +183,63 @@
         </div>
     </section>
 
-    <section id="peticiones" class="section bg-light">
+    <section id="trabaja-con-nosotros" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">¡Únete a Nuestro Equipo!</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Descubre las oportunidades disponibles en Tiendas y Marcas. ¡Tu próximo desafío profesional te espera!
+            </p>
+
+            <div class="vacancies-grid">
+                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-handshake vacancy-icon"></i>
+                    <h3>Asesor Comercial</h3>
+                    <p class="vacancy-role">Responsable del desarrollo de cartera y cumplimiento de metas de venta en rutas asignadas. Se requiere moto/vehículo y experiencia.</p>
+                    <div class="vacancy-details">
+                        <span><i class="fas fa-city"></i> Sede: Pereira/Manizales/Armenia</span>
+                        <span><i class="fas fa-tag"></i> Área: Ventas</span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Asesor%20Comercial*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Aplicar por WhatsApp
+                    </a>
+                </div>
+                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-boxes-stacked vacancy-icon"></i>
+                    <h3>Auxiliar Logístico</h3>
+                    <p class="vacancy-role">Funciones de picking, packing, control de inventario y despacho de pedidos. Clave para la eficiencia de nuestra distribución.</p>
+                    <div class="vacancy-details">
+                        <span><i class="fas fa-city"></i> Sede: Dosquebradas</span>
+                        <span><i class="fas fa-tag"></i> Área: Logística</span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20Log%C3%ADstico*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Aplicar por WhatsApp
+                    </a>
+                </div>
+                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="fas fa-warehouse vacancy-icon"></i>
+                    <h3>Auxiliar de Bodega</h3>
+                    <p class="vacancy-role">Organización general de la bodega, recibo y ubicación de productos, garantizando el orden y el flujo operativo diario.</p>
+                    <div class="vacancy-details">
+                        <span><i class="fas fa-city"></i> Sede: Dosquebradas</span>
+                        <span><i class="fas fa-tag"></i> Área: Bodega </span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20de%20Bodega*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Aplicar por WhatsApp
+                    </a>
+                </div>
+                </div>
+
+            <p class="text-center mt-5" data-aos="fade-up" data-aos-delay="900">
+                ¿No encuentras tu cargo ideal? ¡Siempre estamos buscando talento! Envíanos tu hoja de vida.
+                <br>
+                <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20me%20gustar%C3%ADa%20enviar%20mi%20hoja%20de%20vida%20para%20futuras%20oportunidades%20en%20TYM." class="btn-secondary mt-3" target="_blank">
+                    <i class="fas fa-paperclip"></i> Enviar HV espontánea
+                </a>
+            </p>
+
+        </div>
+    </section>
+    <section id="peticiones" class="section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Solicitudes y Constancias</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Llena este formulario para solicitar tu carta laboral, constancia o documento necesario.</p>
@@ -339,7 +395,7 @@
 
     // Script para cerrar el menú al hacer clic en un enlace
     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', () => {  
             navLinks.classList.remove('active');
             menuToggle.classList.remove('active');
         });

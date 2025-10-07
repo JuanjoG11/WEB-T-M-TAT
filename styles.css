@@ -854,3 +854,113 @@ a:hover {
         gap: 0.8rem;
     }
 }
+/* ============================================== */
+/* ESTILOS PARA LA SECCIÓN TRABAJA CON NOSOTROS */
+/* ============================================== */
+
+/* Contenedor de las tarjetas de vacantes */
+.vacancies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columnas en desktop, se ajustan en móvil */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Estilo de cada tarjeta de vacante */
+.vacancy-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra más pronunciada para resaltar */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--primary-color, #007bff); /* Línea de color que llama la atención */
+}
+
+.vacancy-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícono de la vacante */
+.vacancy-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color, #007bff); 
+    margin-bottom: 15px;
+    display: block; /* Asegura que el ícono esté centrado */
+}
+
+.vacancy-card h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.vacancy-role {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 50px; /* Asegura que todas las tarjetas tengan una altura mínima */
+}
+
+.vacancy-details {
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.vacancy-details span {
+    display: block;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.vacancy-details i {
+    color: #ffc107; /* Color de acento para los íconos de detalle */
+    margin-right: 8px;
+}
+
+/* Botón de Aplicar por WhatsApp (Elemento "Sorprendente") */
+.whatsapp-button {
+    display: inline-block;
+    width: 90%; /* Ancho para que destaque */
+    background-color: #25D366; /* Color de WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px; /* Botón redondeado */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE5A;
+    transform: translateY(-2px);
+}
+
+.whatsapp-button i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Estilo para el botón secundario de enviar HV espontánea */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color, #007bff);
+    color: var(--primary-color, #007bff);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color, #007bff);
+    color: white;
+}
