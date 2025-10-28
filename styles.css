@@ -1127,3 +1127,67 @@ a:hover {
         grid-template-columns: 1fr; /* 1 columna en móvil */
     }
 }
+/* Estilos necesarios para los botones flotantes */
+
+/* Contenedor de botones fijos */
+.fixed-contact-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilo base de los botones fijos (Call y WhatsApp) */
+.call-fixed, .whatsapp-fixed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Colores específicos */
+.call-fixed {
+    background-color: #3498db; /* Azul */
+}
+.whatsapp-fixed {
+    background-color: #25D366; /* Verde WhatsApp */
+}
+
+.call-fixed:hover, .whatsapp-fixed:hover {
+    transform: scale(1.1);
+}
+
+/* Botón Volver Arriba */
+#back-to-top {
+    position: fixed;
+    bottom: 80px; /* Separado del botón de WhatsApp */
+    right: 20px;
+    background-color: #333; /* Color oscuro */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Inicialmente oculto, JS lo muestra */
+    opacity: 0.8;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+#back-to-top:hover {
+    opacity: 1;
+    background-color: var(--primary-color, #f39c12); /* Usar el color primario si está definido */
+}
