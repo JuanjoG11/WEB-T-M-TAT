@@ -18,36 +18,44 @@
 </head>
 <body>
 
-<header id="inicio" class="hero-section" style="background: url('hero-tat-bg.jpg') no-repeat center center/cover;">
-    <nav class="navbar">
-        <div class="logo-container">
-            <img src="logo_tat.png" class="logo" alt="Logo TAT">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#aliados">Aliados</a></li>
-            <li><a href="#cobertura">Cobertura</a></li>
-            <li><a href="#capacitaciones">Capacitaciones</a></li>
-            <li><a href="#nomina">Nómina</a></li>
-            <li><a href="#peticiones">Solicitudes</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="index.html" class="btn-home"><i class="fas fa-home"></i> Volver</a></li>
-        </ul>
-        <button class="menu-toggle" aria-label="Abrir menú de navegación">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-    </nav>
+<header id="inicio" class="hero-section">
+  <div class="hero-slider">
+    <div class="slide active" style="background-image: url('fami.jpg');"></div>
+    <div class="slide" style="background-image: url('noso.jpg');"></div>
+    <div class="slide" style="background-image: url('rexo.jpg');"></div>
+    <div class="slide" style="background-image: url('ego.jpg');"></div>
+  </div>
 
-    <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
-        <h1>Productos de Consumo Directamente a tu Tienda</h1>
-        <p>Tu socio estratégico en la distribución de productos masivos para el Eje Cafetero.</p>
-        <a href="#productos" class="cta-button">Ver Portafolio</a>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="logo_tat.png" class="logo" alt="Logo TAT">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#aliados">Aliados</a></li>
+      <li><a href="#cobertura">Cobertura</a></li>
+      <li><a href="#capacitaciones">Capacitaciones</a></li>
+      <li><a href="#nomina">Nómina</a></li>
+      <li><a href="#peticiones">Solicitudes</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="index.html" class="btn-home"><i class="fas fa-home"></i> Volver</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Abrir menú de navegación">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+   <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+        <h1>Conectando Marcas con el Eje Cafetero</h1>
+        <p>Tu aliado estratégico en distribución y logística, impulsando el crecimiento de tu negocio.</p>
+        <a href="#contacto" class="cta-button">Contáctanos</a>
     </div>
 </header>
+
 
 <main>
     
@@ -462,7 +470,21 @@
             hideModal();
         }
     }
+    // Carrusel automático de fondo en el hero
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slider .slide');
+
+function showNextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+// Cambia cada 6 segundos
+setInterval(showNextSlide, 4000);
+
 </script>
+
 
 </body>
 </html>
