@@ -1244,3 +1244,62 @@
     z-index: 1;
     }
     
+.mascota-container {
+    position: fixed;
+    bottom: 10px;
+    right: -5px;        /* lo pega más a la derecha — puedes usar -10px si quieres más */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;   /* todo alineado a la derecha */
+    z-index: 9999;
+}
+
+/* Imagen del pingüino */
+.mascota-img {
+    width: 110px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Burbuja alta y angosta */
+.mascota-bubble {
+    background: #4b83fa;
+    color: white;
+    padding: 12px;
+    width: 100px;             /* burbuja angosta */
+    min-height: 110px;        /* burbuja alta */
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Triangulito apuntando al pingüino */
+.mascota-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 15px;            /* ajusta la punta según la posición exacta del pingüino */
+    width: 0;
+    height: 0;
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: #4b83fa transparent transparent transparent;
+}
+
+/* Animaciones */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(.9); }
+    to { opacity: 1; transform: scale(1); }
+}
