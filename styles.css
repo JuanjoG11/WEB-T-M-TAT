@@ -1247,7 +1247,7 @@
 .mascota-container {
     position: fixed;
     bottom: 10px;
-    right: -5px;        /* lo pega más a la derecha — puedes usar -10px si quieres más */
+    right: -10px;        /* lo pega más a la derecha — puedes usar -10px si quieres más */
     display: flex;
     flex-direction: column;
     align-items: flex-end;   /* todo alineado a la derecha */
@@ -1256,7 +1256,7 @@
 
 /* Imagen del pingüino */
 .mascota-img {
-    width: 110px;
+    width: 150px;
     animation: bounce 2s infinite ease-in-out;
 }
 
@@ -1266,7 +1266,7 @@
     color: white;
     padding: 12px;
     width: 100px;             /* burbuja angosta */
-    min-height: 110px;        /* burbuja alta */
+    min-height: 100px;        /* burbuja alta */
     border-radius: 15px;
     margin-bottom: 5px;
     font-size: 12px;
