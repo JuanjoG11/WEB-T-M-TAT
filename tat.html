@@ -38,6 +38,7 @@
       <li><a href="#cobertura">Cobertura</a></li>
       <li><a href="#capacitaciones">Capacitaciones</a></li>
       <li><a href="#nomina">Nómina</a></li>
+        <li><a href="#trabaja-con-nosotros">Empleo</a></li>
       <li><a href="#peticiones">Solicitudes</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li><a href="index.html" class="btn-home"><i class="fas fa-home"></i> Volver</a></li>
@@ -128,71 +129,48 @@
 
     <section id="cobertura" class="section bg-light">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Mapa de Cobertura TAT</h2>
+           
+            <section id="cobertura" class="section">
+    <div class="container">
+        <div class="section-content text-center">
+            <h2 data-aos="fade-up">Nuestra Cobertura</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-                Empresas cubiertas: <strong>Unilever, Familia</strong>.
+                Descubre nuestra amplia red de distribución y las marcas líderes que llevamos a tu negocio. 
             </p>
-
-            <div class="map-container-section">
-                <div class="map-details" data-aos="fade-right">
-                    <p>Actualmente cubrimos las principales ciudades del Eje Cafetero y el Norte del Valle, garantizando que tus productos lleguen a cada tienda de barrio.</p>
+        </div>
+        <div class="map-container-section">
+            <div class="map-details" data-aos="fade-right">
+                <p>Distribuimos productos de alta calidad en todo el Eje Cafetero, llevando directamente a tu negocio las mejores marcas del mercado.</p>
+                
+                <div class="coverage-list">
+                    <h4>Marcas por Región:</h4>
                     
-                    <div class="coverage-list">
-                        <h4>Cobertura Detallada:</h4>
-                        
-                        <div class="coverage-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>Quindío</h5>
-                            <p>Armenia y municipios cercanos. **Empresa:** Unilever</p>
-                        </div>
-
-                        <div class="coverage-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>Risaralda</h5>
-                            <p>Pereira y Dosquebradas. **Empresa:** Familia</p>
-                        </div>
-                        
-                        <div class="coverage-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h5>Caldas</h5>
-                            <p>Manizales y área metropolitana. **Empresa:** Unilever</p>
-                        </div>
+                  
+                    <div class="coverage-item" data-aos="fade-right" data-aos-delay="200">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <h5>Caldas</h5>
+                        <ul>
+                            <li>UNILEVER</li>
+                            
+                    </div>
+                    
+                    <div class="coverage-item" data-aos="fade-right" data-aos-delay="300">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <h5>Risaralda</h5>
+                        <ul>
+                            <li>FAMILIA</li>
+                            <li>UNILEVER</li>
+                        </ul>
                     </div>
 
-                     <div class="botones-departamentos" style="margin-top: 20px;">
-                        <button class="btn-primary" style="padding: 10px 15px; margin-right: 10px;" onclick="mostrarDeptoTAT('quindio')">Ver Quindío</button>
-                        <button class="btn-primary" style="padding: 10px 15px; margin-right: 10px;" onclick="mostrarDeptoTAT('risaralda')">Ver Risaralda</button>
-                        <button class="btn-primary" style="padding: 10px 15px;" onclick="mostrarDeptoTAT('caldas')">Ver Caldas</button>
-                    </div>
-                </div>
-
-                <div class="map-iframe" data-aos="fade-left" style="background-color: #eef; border: 1px solid #ddd;">
-                    <svg class="svg-mapa" width="100%" height="100%" viewBox="0 0 800 400">
-                        <g id="quindio-tat" style="display:none">
-                            <circle cx="200" cy="250" r="80" fill="#ffe4ec" opacity="0.8" />
-                            <text x="200" y="245" text-anchor="middle" fill="#000" font-size="16px" font-weight="bold">Quindío</text>
-                            <circle cx="200" cy="270" r="6" fill="#cc0066" />
-                            <text x="210" y="275" font-size="14px">Armenia - Unilever</text>
-                        </g>
-
-                        <g id="risaralda-tat" style="display:none">
-                            <circle cx="400" cy="180" r="80" fill="#d0f0fd" opacity="0.8" />
-                            <text x="400" y="175" text-anchor="middle" fill="#000" font-size="16px" font-weight="bold">Risaralda</text>
-                            <circle cx="400" cy="200" r="6" fill="#0099ff" />
-                            <text x="410" y="205" font-size="14px">Pereira - Familia</text>
-                        </g>
-
-                        <g id="caldas-tat" style="display:none">
-                            <circle cx="600" cy="250" r="80" fill="#fff8d2" opacity="0.8" />
-                            <text x="600" y="245" text-anchor="middle" fill="#000" font-size="16px" font-weight="bold">Caldas</text>
-                            <circle cx="600" cy="270" r="6" fill="#ffaa00" />
-                            <text x="610" y="275" font-size="14px">Manizales - Unilever</text>
-                        </g>
-                    </svg>
                 </div>
             </div>
+            <div class="map-iframe" data-aos="fade-left">
+                <iframe src="https://www.google.com/maps/d/embed?mid=15j6EdVzCkYjZFuzUvZAOBqjxXobqpxk&ehbc=2E312F" width="750" height="600"></iframe>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="capacitaciones" class="section">
         <div class="container text-center" data-aos="fade-in">
@@ -203,7 +181,62 @@
             </a>
         </div>
     </section>
+    <section id="trabaja-con-nosotros" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">¡Únete a Nuestro Equipo!</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Descubre las oportunidades disponibles en Tiendas y Marcas. ¡Tu próximo desafío profesional te espera!
+            </p>
 
+            <div class="vacancies-grid">
+                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-handshake vacancy-icon" aria-hidden="true"></i>
+                    <h3>Asesor Comercial</h3>
+                    <p class="vacancy-role">Responsable del desarrollo de cartera y cumplimiento de metas de venta en rutas asignadas. Se requiere moto/vehículo y experiencia.</p>
+                    <div class="vacancy-details">
+                        <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Pereira/Manizales</span>
+                        <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Ventas</span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Asesor%20Comercial*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
+                    </a>
+                </div>
+                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-boxes-stacked vacancy-icon" aria-hidden="true"></i>
+                    <h3>Auxiliar Logístico</h3>
+                    <p class="vacancy-role">Funciones de picking, packing, control de inventario y despacho de pedidos. Clave para la eficiencia de nuestra distribución.</p>
+                    <div class="vacancy-details">
+                        <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Dosquebradas</span>
+                        <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Logística</span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20Log%C3%ADstico*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
+                    </a>
+                </div>
+                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="fas fa-warehouse vacancy-icon" aria-hidden="true"></i>
+                    <h3>Auxiliar de Bodega</h3>
+                    <p class="vacancy-role">Organización general de la bodega, recibo y ubicación de productos, garantizando el orden y el flujo operativo diario.</p>
+                    <div class="vacancy-details">
+                        <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Dosquebradas</span>
+                        <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Bodega </span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20de%20Bodega*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-center mt-5" data-aos="fade-up" data-aos-delay="900">
+                ¿No encuentras tu cargo ideal? ¡Siempre estamos buscando talento! Envíanos tu hoja de vida.
+                <br>
+                <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20me%20gustar%C3%ADa%20enviar%20mi%20hoja%20de%20vida%20para%20futuras%20oportunidades%20en%20TYM." class="btn-secondary mt-3" target="_blank">
+                    <i class="fas fa-paperclip" aria-hidden="true"></i> Enviar HV espontánea
+                </a>
+            </p>
+
+        </div>
+    </section>
     <section id="nomina" class="section bg-light">
         <div class="container text-center" data-aos="fade-in">
             <h2 class="section-title">Conoce tu Nómina</h2>
@@ -291,18 +324,11 @@
     </div>
 </div>
 
-<div class="fixed-contact-buttons">
-    <a href="tel:+573162821972" class="call-fixed" title="Llámanos ahora">
-        <i class="fas fa-phone"></i>
-    </a>
-    <a href="https://api.whatsapp.com/send?phone=573162821972&text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20productos%20que%20distribuye%20TAT." class="whatsapp-fixed" target="_blank" title="Chatea por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
-
-<button id="back-to-top" title="Volver arriba">
-    <i class="fas fa-chevron-up"></i>
-</button>
+    <div class="mascota-container">
+        <a href="https://wa.me/573162821972" target="_blank" aria-label="WhatsApp de soporte TYM"> <div class="mascota-bubble">¡Hola! resuelvo aquí tus dudas</div>
+            <img src="puma.png" class="mascota-img" alt="Mascota de soporte: un puma">
+        </a>
+    </div>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>

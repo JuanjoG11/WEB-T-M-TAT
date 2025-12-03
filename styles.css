@@ -1303,3 +1303,24 @@
     from { opacity: 0; transform: scale(.9); }
     to { opacity: 1; transform: scale(1); }
 }
+
+
+/* Para el texto de información de productos */
+.products-info-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333; /* Ajusta el color si es necesario */
+}
+
+/* Para la línea separadora en la sección Aliados */
+.cta-separator {
+    margin: 40px auto;
+    width: 50%;
+    border-top: 1px solid #ddd;
+}
+
+/* Para el encabezado CTA en la sección Aliados */
+.cta-heading {
+    font-size: 1.5rem;
+    color: var(--primary-color); /* Asegúrate de que --primary-color esté definido */
+}
