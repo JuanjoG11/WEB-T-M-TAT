@@ -137,7 +137,7 @@
         </div>
     </section>
 
-    <section id="cobertura" class="section bg-light">
+<section id="cobertura" class="section bg-light">
         <div class="container">
            
             <section id="cobertura" class="section">
@@ -256,41 +256,45 @@
             </a>
         </div>
     </section>
+ <section id="peticiones" class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Solicitudes y Constancias</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Llena este formulario para solicitar tu carta laboral, constancia o documento necesario.
+        </p>
 
-    <section id="peticiones" class="section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Solicitudes y Constancias</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Solicita aquí tu carta laboral, constancia o documento necesario. Te contactaremos al correo que indiques.</p>
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="form-modern" data-aos="fade-in" data-aos-delay="400">
-                <div class="form-group">
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
-                </div>
-                <div class="form-group">
-                    <label for="email">Tu correo electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
-                </div>
-                <div class="form-group">
-                    <label for="tipo">Tipo de solicitud</label>
-                    <select id="tipo" name="tipo" required>
-                        <option value="">Selecciona el tipo de solicitud</option>
-                        <option value="carta-laboral">Carta laboral</option>
-                        <option value="constancia-ingresos">Constancia de ingresos</option>
-                        <option value="certificado-trabajo">Certificado de trabajo</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Información adicional o detalles</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Describe los detalles específicos de tu solicitud..."></textarea>
-                </div>
-                <button type="submit" class="btn-primary">
-                    <i class="fas fa-paper-plane"></i> Enviar Solicitud
-                </button>
-            </form>
-        </div>
-    </section>
-
+        <form id="solicitud-form" action="https://formspree.io/f/xgvzaqby" method="POST" class="form-modern" data-aos="fade-in" data-aos-delay="400">
+            <div class="form-group">
+                <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Tu correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+            <div class="form-group">
+                <label for="identificacion"><i class="fas fa-id-card"></i> Cédula / Identificación</label>
+                <input type="text" id="identificacion" name="identificacion" required placeholder="Tu número de identificación">
+            </div>
+            <div class="form-group">
+                <label for="tipo"><i class="fas fa-file-alt"></i> Tipo de solicitud</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona el tipo de solicitud</option>
+                    <option value="carta-laboral">Carta laboral</option>
+                    <option value="constancia-ingresos">Constancia de ingresos</option>
+                    <option value="otros">Otros (detallar en mensaje)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message"><i class="fas fa-comment-dots"></i> Información adicional o detalles</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Describe los detalles específicos de tu solicitud (destino, fechas, etc.)..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Solicitud
+            </button>
+        </form>
+    </div>
+ </section>
     <section id="contacto" class="section bg-light">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
@@ -310,15 +314,6 @@
     </div>
 </section>
 </main>
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content" data-aos="fade-up">
-            <p>© 2025 TAT. Todos los derechos reservados</p>
-        </div>
-    </div>
-</footer>
-
 <div id="product-modal" class="modal">
     <div class="modal-content">
         <span class="close-button">×</span>
@@ -335,6 +330,16 @@
             <img src="puma.png" class="mascota-img" alt="Mascota de soporte: un puma">
         </a>
     </div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content" data-aos="fade-up">
+            <p>© 2025 TAT. Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+
+
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>

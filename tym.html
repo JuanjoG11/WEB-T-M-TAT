@@ -285,40 +285,46 @@
     </section>
     
 
-    <section id="peticiones" class="section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Solicitudes y Constancias</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Llena este formulario para solicitar tu carta laboral, constancia o documento necesario.</p>
-            <form action="https://formspree.io/f/xgvzaqby" method="POST" class="form-modern" data-aos="fade-in" data-aos-delay="400">
-                <div class="form-group">
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
-                </div>
-                <div class="form-group">
-                    <label for="email">Tu correo electrónico</label>
-                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
-                </div>
-                <div class="form-group">
-                    <label for="tipo">Tipo de solicitud</label>
-                    <select id="tipo" name="tipo" required>
-                        <option value="">Selecciona el tipo de solicitud</option>
-                        <option value="carta-laboral">Carta laboral</option>
-                        <option value="constancia-ingresos">Constancia de ingresos</option>
-                        <option value="certificado-trabajo">Certificado de trabajo</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Información adicional o detalles</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Describe los detalles específicos de tu solicitud..."></textarea>
-                </div>
-                <button type="submit" class="btn-primary">
-                    <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Solicitud
-                </button>
-            </form>
-        </div>
-    </section>  
+   <section id="peticiones" class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Solicitudes y Constancias</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Llena este formulario para solicitar tu carta laboral, constancia o documento necesario.
+        </p>
 
+        <form id="solicitud-form" action="https://formspree.io/f/xgvzaqby" method="POST" class="form-modern" data-aos="fade-in" data-aos-delay="400">
+            <div class="form-group">
+                <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Tu correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            </div>
+            <div class="form-group">
+                <label for="identificacion"><i class="fas fa-id-card"></i> Cédula / Identificación</label>
+                <input type="text" id="identificacion" name="identificacion" required placeholder="Tu número de identificación">
+            </div>
+            <div class="form-group">
+                <label for="tipo"><i class="fas fa-file-alt"></i> Tipo de solicitud</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona el tipo de solicitud</option>
+                    <option value="carta-laboral">Carta laboral</option>
+                    <option value="constancia-ingresos">Constancia de ingresos</option>
+                    <option value="otros">Otros (detallar en mensaje)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message"><i class="fas fa-comment-dots"></i> Información adicional o detalles</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Describe los detalles específicos de tu solicitud (destino, fechas, etc.)..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Solicitud
+            </button>
+        </form>
+
+    </div>
+</section>
 <section id="contacto" class="section bg-light">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
