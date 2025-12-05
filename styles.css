@@ -679,24 +679,25 @@
     /* ========================================================= */
 
     .contact-info-card {
-        background-color: var(--light-color);
-        padding: 1.5rem;
-        border-radius: 12px;
-    }
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
 
-    .contact-info-card p {
-        margin-bottom: 0.8rem;
-    }
+.contact-info-card p {
+    margin-bottom: 0.8rem;
+}
 
-    .contact-info-card i {
-        color: var(--primary-color);
-        margin-right: 0.5rem;
-    }
+.contact-info-card i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
 
-    .map-container iframe {
-        border-radius: 12px;
-        display: block;
-    }
+/* Este bloque debe complementarse con width: 100%; y height: 100%; en el CSS de arriba */
+.map-container iframe {
+    border-radius: 12px;
+    display: block;
+}
 
     /* Sección de Cobertura (con más detalle) */
     .map-container-section {
