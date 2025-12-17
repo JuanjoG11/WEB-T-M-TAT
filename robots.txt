@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tiendasymarcas.com/sitemap.xml
+Sitemap: https://tiendasymarcaseje.com/sitemap.xml
