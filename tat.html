@@ -1,519 +1,597 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAT - Tu Aliado de Confianza</title>
+    <title>TAT - Tu Aliado de Confianza | Distribución Eje Cafetero</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="TAT: Tu aliado de confianza en distribución y comercialización en el Eje Cafetero. Marcas líderes como Familia, Unilever y más.">
+    <meta name="keywords"
+        content="TAT, distribución, eje cafetero, familia, unilever, aseo, cuidado personal, alimentos">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="TAT - Tu Aliado de Confianza">
+    <meta property="og:description"
+        content="Distribución eficiente y confiable en el Eje Cafetero. Conectamos marcas con tu negocio.">
+    <meta property="og:image" content="https://www.tiendasymarcas.com/logo_tat.png">
+    <meta property="og:url" content="https://www.tiendasymarcas.com/tat.html">
+    <meta property="og:type" content="website">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.tiendasymarcas.com/tat.html">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "TAT - Tiendas y Marcas",
+      "image": "https://www.tiendasymarcas.com/logo_tat.png",
+      "telephone": "+573162821972",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrera 16 Nº 77 - 00, Intersección La Romelia",
+        "addressLocality": "Dosquebradas",
+        "addressRegion": "Risaralda",
+        "addressCountry": "CO"
+      },
+      "url": "https://www.tiendasymarcas.com/tat.html"
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css"> 
+
+    <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
+
 <body>
 
-<header id="inicio" class="hero-section">
-  <div class="hero-slider">
-    <div class="slide active" style="background-image: url('foc3.jpeg');"></div>
-    <div class="slide" style="background-image: url('fami.jpg');"></div>
-    <div class="slide" style="background-image: url('noso.jpg');"></div>
-    <div class="slide" style="background-image: url('rexo.jpg');"></div>
-  
-  </div>
-
-  <nav class="navbar">
-    <div class="logo-container">
-      <img src="logo_tat.png" class="logo" alt="Logo TAT">
-    </div>
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#productos">Productos</a></li>
-      <li><a href="#aliados">Aliados</a></li>
-      <li><a href="#cobertura">Cobertura</a></li>
-      <li><a href="#capacitaciones">Capacitaciones</a></li>
-      <li><a href="#nomina">Nómina</a></li>
-        <li><a href="#trabaja-con-nosotros">Empleo</a></li>
-      <li><a href="#peticiones">Solicitudes</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="index.html" class="btn-home"><i class="fas fa-home"></i> Volver</a></li>
-    </ul>
-    <button class="menu-toggle" aria-label="Abrir menú de navegación">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-  </nav>
-
-   <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
-        <h1>Conectando Marcas con el Eje Cafetero</h1>
-        <p>Tu aliado estratégico en comercialización y distribución, impulsando el crecimiento de tu negocio.</p>
-        <a href="#contacto" class="cta-button">Contáctanos</a>
-    </div>
-</header>
-
-
-<main>
-    
-    <section id="nosotros" class="section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Quiénes Somos</h2>
-            
-            
-            <div class="products-grid"> <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-rocket icon"></i>
-                    <h3>Misión</h3>
-                    <p>Ser el distribuidor líder en el Eje Cafetero, conectando marcas con tiendas minoristas de manera eficiente y confiable.</p>
-                </div>
-                <div class="product-card" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fas fa-eye icon"></i>
-                    <h3>Visión</h3>
-                    <p>Expandir nuestra cobertura y portafolio, manteniéndonos a la vanguardia en logística y servicio al cliente para el 2030.</p>
-                </div>
-                <div class="product-card" data-aos="fade-up" data-aos-delay="700">
-                    <i class="fas fa-users icon"></i>
-                    <h3>Valores</h3>
-                    <p>Compromiso, Integridad, Eficiencia, y Orientación al Cliente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="productos" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Nuestros Productos</h2>
-             <p class="text-center mb-5 products-info-text" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i> Haz clic en cualquier categoría para conocer el portafolio de marcas líderes que distribuimos.
-            </p>
-            <div class="products-grid">
-                <div class="product-card clickable-card" data-aos="fade-up" data-aos-delay="400" data-product-key="familia">
-                    <i class="fas fa-toilet-paper icon"></i>
-                    <h3>Aseo y Cuidado Personal</h3>
-                    <p>Papel higiénico, toallas de cocina, servilletas y productos de higiene del hogar.</p>
-                </div>
-                <div class="product-card clickable-card" data-aos="fade-up" data-aos-delay="600" data-product-key="unilever">
-                    <i class="fas fa-soap icon"></i>
-                    <h3>Alimentos y Detergentes</h3>
-                    <p>Gran variedad de alimentos procesados, aseo, salsas y productos de lavado de ropa.</p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section id="aliados" class="section">
-        <div class="container">
-          <h2 class="section-title" data-aos="fade-up">Nuestras Marcas Aliadas</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-                Trabajamos con las marcas líderes de la industria, un sello de calidad y confianza en el Eje Cafetero.
-            </p>
-             <p class="text-center mb-5 products-info-text" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i> Haz clic en cualquier aliado y conoce más...
-            </p>
-            <div class="aliados-grid">
-                <div class="aliado-card" data-aos="fade-up" data-aos-delay="350"> 
-                    <a href="https://www.unilever.co/">
-                    <img src="unileverr.png" alt="Logo Unilever">
-                    </a>
-                </div>
-                <div class="aliado-card" data-aos="fade-up" data-aos-delay="350">
-                    <a href="https://www.familia.com.co/">
-                    <img src="familia.png" alt="Logo Familia"> 
-                    </a>
-               </div>
-            
-            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="1000">
-                <h3 style="font-size: 1.5rem; color: var(--primary-color);">¿Buscas un socio de distribución confiable?</h3>
-                <a href="#contacto" class="btn-secondary mt-3">
-                    <i class="fas fa-truck"></i> ¡Distribuye con TAT!
-                </a>
-            </div>
-        </div>
-    </section>
-
-<section id="cobertura" class="section bg-light">
-        <div class="container">
-           
-            <section id="cobertura" class="section">
-    <div class="container">
-        <div class="section-content text-center">
-            <h2 data-aos="fade-up">Nuestra Cobertura</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-                Descubre nuestra amplia red de distribución y las marcas líderes que llevamos a tu negocio. 
-            </p>
-        </div>
-        <div class="map-container-section">
-            <div class="map-details" data-aos="fade-right">
-                <p>Distribuimos productos de alta calidad en todo el Eje Cafetero, llevando directamente a tu negocio las mejores marcas del mercado.</p>
-                
-                <div class="coverage-list">
-                    <h4>Marcas por Región:</h4>
-                    
-                  
-                    <div class="coverage-item" data-aos="fade-right" data-aos-delay="200">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                        <h5>Caldas</h5>
-                        <ul>
-                            <li>UNILEVER</li>
-                            
-                    </div>
-                    
-                    <div class="coverage-item" data-aos="fade-right" data-aos-delay="300">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                        <h5>Risaralda</h5>
-                        <ul>
-                            <li>FAMILIA</li>
-                            <li>UNILEVER</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-            <div class="map-iframe" data-aos="fade-left">
-                <iframe src="https://www.google.com/maps/d/embed?mid=15j6EdVzCkYjZFuzUvZAOBqjxXobqpxk&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="capacitaciones" class="section">
-        <div class="container text-center" data-aos="fade-in">
-            <h2 class="section-title">Capacitaciones y Formación</h2>
-            <p class="section-subtitle">Explora nuestros cursos y talleres para formación continua y profesional.</p>
-            <a href="#" class="btn-primary" target="_blank">
-                <i class="fas fa-graduation-cap"></i> Ir a Capacitaciones
-            </a>
-        </div>
-    </section>
-    <section id="trabaja-con-nosotros" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">¡Únete a Nuestro Equipo!</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-                Descubre las oportunidades disponibles en Tiendas y Marcas. ¡Tu próximo desafío profesional te espera!
-            </p>
-
-            <div class="vacancies-grid">
-                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-handshake vacancy-icon" aria-hidden="true"></i>
-                    <h3>Asesor Comercial</h3>
-                    <p class="vacancy-role">Responsable del desarrollo de cartera y cumplimiento de metas de venta en rutas asignadas. Se requiere moto/vehículo y experiencia.</p>
-                    <div class="vacancy-details">
-                        <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Pereira/Manizales</span>
-                        <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Ventas</span>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Asesor%20Comercial*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
-                    </a>
-                </div>
-                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="500">
-                    <i class="fas fa-boxes-stacked vacancy-icon" aria-hidden="true"></i>
-                    <h3>Auxiliar Logístico</h3>
-                    <p class="vacancy-role">Funciones de picking, packing, control de inventario y despacho de pedidos. Clave para la eficiencia de nuestra distribución.</p>
-                    <div class="vacancy-details">
-                        <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Dosquebradas</span>
-                        <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Logística</span>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20Log%C3%ADstico*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
-                    </a>
-                </div>
-                <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="700">
-                    <i class="fas fa-warehouse vacancy-icon" aria-hidden="true"></i>
-                    <h3>Auxiliar de Bodega</h3>
-                    <p class="vacancy-role">Organización general de la bodega, recibo y ubicación de productos, garantizando el orden y el flujo operativo diario.</p>
-                    <div class="vacancy-details">
-                        <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Dosquebradas</span>
-                        <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Bodega </span>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20de%20Bodega*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-button" target="_blank">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
-                    </a>
-                </div>
-            </div>
-
-            <p class="text-center mt-5" data-aos="fade-up" data-aos-delay="900">
-                ¿No encuentras tu cargo ideal? ¡Siempre estamos buscando talento! Envíanos tu hoja de vida.
-                <br>
-                <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20me%20gustar%C3%ADa%20enviar%20mi%20hoja%20de%20vida%20para%20futuras%20oportunidades%20en%20TYM." class="btn-secondary mt-3" target="_blank">
-                    <i class="fas fa-paperclip" aria-hidden="true"></i> Enviar HV espontánea
-                </a>
-            </p>
+    <header id="inicio" class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('foc3.jpeg');"></div>
+            <div class="slide" style="background-image: url('fami.jpg');"></div>
+            <div class="slide" style="background-image: url('noso.jpg');"></div>
+            <div class="slide" style="background-image: url('rexo.jpg');"></div>
 
         </div>
-    </section>
-    <section id="nomina" class="section bg-light">
-        <div class="container text-center" data-aos="fade-in">
-            <h2 class="section-title">Conoce tu Nómina</h2>
-            <p class="section-subtitle">Accede a tu plataforma personal para consultar pagos y reportes laborales.</p>
-            <a href="https://distri.tu-nomina.com/index.php/inicio" class="btn-primary" target="_blank">
-                <i class="fas fa-file-invoice-dollar"></i> Ir a plataforma de Nómina
-            </a>
-        </div>
-    </section>
- <section id="peticiones" class="section">
-    <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Solicitudes y Constancias</h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
-            Llena este formulario para solicitar tu carta laboral, constancia o documento necesario.
-        </p>
 
-        <form id="solicitud-form" action="https://formspree.io/f/meoywalg" method="POST" class="form-modern" data-aos="fade-in" data-aos-delay="400">
-            <div class="form-group">
-                <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo_tat.png" class="logo" alt="Logo TAT">
             </div>
-            <div class="form-group">
-                <label for="email"><i class="fas fa-envelope"></i> Tu correo electrónico</label>
-                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
-            </div>
-            <div class="form-group">
-                <label for="identificacion"><i class="fas fa-id-card"></i> Cédula / Identificación</label>
-                <input type="text" id="identificacion" name="identificacion" required placeholder="Tu número de identificación">
-            </div>
-            <div class="form-group">
-                <label for="tipo"><i class="fas fa-file-alt"></i> Tipo de solicitud</label>
-                <select id="tipo" name="tipo" required>
-                    <option value="">Selecciona el tipo de solicitud</option>
-                    <option value="carta-laboral">Carta laboral</option>
-                    <option value="constancia-ingresos">Constancia de ingresos</option>
-                    <option value="otros">Otros (detallar en mensaje)</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message"><i class="fas fa-comment-dots"></i> Información adicional o detalles</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Describe los detalles específicos de tu solicitud (destino, fechas, etc.)..."></textarea>
-            </div>
-            <button type="submit" class="btn-primary">
-                <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Solicitud
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#aliados">Aliados</a></li>
+                <li><a href="#cobertura">Cobertura</a></li>
+                <li><a href="#capacitaciones">Capacitaciones</a></li>
+                <li><a href="#nomina">Nómina</a></li>
+                <li><a href="#trabaja-con-nosotros">Empleo</a></li>
+                <li><a href="#peticiones">Solicitudes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html" class="btn-home"><i class="fas fa-home"></i> Volver</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
-        </form>
-    </div>
- </section>
-    <section id="contacto" class="section bg-light">
-    <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Estamos listos para atenderte y resolver tus dudas.</p>
-        <div class="contact-grid">
-            <div class="contact-info-card" data-aos="fade-right">
-                <h3>Información de Contacto</h3>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Carrera 16 Nº 77 - 00, Intersección La Romelia</p>
-                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:+573162821972">316 282 1972</a></p>
-                <p><i class="fas fa-building"></i> <strong>Empresa:</strong> Tiendas y Marcas del Eje Cafetero</p>
-                <p><i class="fas fa-city"></i> <strong>Ciudad:</strong> Dosquebradas, Risaralda</p>
+        </nav>
+
+        <div class="hero-content" data-aos="zoom-out" data-aos-duration="1500">
+            <h1>Conectando Marcas con el Eje Cafetero</h1>
+            <p>Tu aliado estratégico en comercialización y distribución, impulsando el crecimiento de tu negocio.</p>
+            <a href="#contacto" class="cta-button">Contáctanos</a>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section id="nosotros" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Quiénes Somos</h2>
+
+
+                <div class="products-grid">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-rocket icon"></i>
+                        <h3>Misión</h3>
+                        <p>Ser el distribuidor líder en el Eje Cafetero, conectando marcas con tiendas minoristas de
+                            manera eficiente y confiable.</p>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-eye icon"></i>
+                        <h3>Visión</h3>
+                        <p>Expandir nuestra cobertura y portafolio, manteniéndonos a la vanguardia en logística y
+                            servicio al cliente para el 2030.</p>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-users icon"></i>
+                        <h3>Valores</h3>
+                        <p>Compromiso, Integridad, Eficiencia, y Orientación al Cliente.</p>
+                    </div>
+                </div>
             </div>
-            <div class="map-container" data-aos="fade-left">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.518773841109!2d-75.66149222603376!3d4.852348640326362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388121886525e3%3A0x90ce14bf8b9f5644!2sTiendas%20y%20marcas%20del%20eje%20cafetero!5e0!3m2!1ses!2sco!4v1762828308838!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section id="productos" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Nuestros Productos</h2>
+                <p class="text-center mb-5 products-info-text" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i> Haz clic en cualquier categoría para
+                    conocer el portafolio de marcas líderes que distribuimos.
+                </p>
+                <div class="products-grid">
+                    <div class="product-card clickable-card" data-aos="fade-up" data-aos-delay="400"
+                        data-product-key="familia">
+                        <i class="fas fa-toilet-paper icon"></i>
+                        <h3>Aseo y Cuidado Personal</h3>
+                        <p>Papel higiénico, toallas de cocina, servilletas y productos de higiene del hogar.</p>
+                    </div>
+                    <div class="product-card clickable-card" data-aos="fade-up" data-aos-delay="600"
+                        data-product-key="unilever">
+                        <i class="fas fa-soap icon"></i>
+                        <h3>Alimentos y Detergentes</h3>
+                        <p>Gran variedad de alimentos procesados, aseo, salsas y productos de lavado de ropa.</p>
+                    </div>
+
+                </div>
             </div>
+        </section>
+
+        <section id="aliados" class="section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Nuestras Marcas Aliadas</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Trabajamos con las marcas líderes de la industria, un sello de calidad y confianza en el Eje
+                    Cafetero.
+                </p>
+                <p class="text-center mb-5 products-info-text" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i> Haz clic en cualquier aliado y conoce
+                    más...
+                </p>
+                <div class="aliados-grid">
+                    <div class="aliado-card" data-aos="fade-up" data-aos-delay="350">
+                        <a href="https://www.unilever.co/">
+                            <img src="unileverr.png" alt="Logo Unilever">
+                        </a>
+                    </div>
+                    <div class="aliado-card" data-aos="fade-up" data-aos-delay="350">
+                        <a href="https://www.familia.com.co/">
+                            <img src="familia.png" alt="Logo Familia">
+                        </a>
+                    </div>
+
+                    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="1000">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color);">¿Buscas un socio de distribución
+                            confiable?</h3>
+                        <a href="#contacto" class="btn-secondary mt-3">
+                            <i class="fas fa-truck"></i> ¡Distribuye con TAT!
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        <section id="cobertura" class="section bg-light">
+            <div class="container">
+
+                <section id="cobertura" class="section">
+                    <div class="container">
+                        <div class="section-content text-center">
+                            <h2 data-aos="fade-up">Nuestra Cobertura</h2>
+                            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                                Descubre nuestra amplia red de distribución y las marcas líderes que llevamos a tu
+                                negocio.
+                            </p>
+                        </div>
+                        <div class="map-container-section">
+                            <div class="map-details" data-aos="fade-right">
+                                <p>Distribuimos productos de alta calidad en todo el Eje Cafetero, llevando directamente
+                                    a tu negocio las mejores marcas del mercado.</p>
+
+                                <div class="coverage-list">
+                                    <h4>Marcas por Región:</h4>
+
+
+                                    <div class="coverage-item" data-aos="fade-right" data-aos-delay="200">
+                                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                        <h5>Caldas</h5>
+                                        <ul>
+                                            <li>UNILEVER</li>
+
+                                    </div>
+
+                                    <div class="coverage-item" data-aos="fade-right" data-aos-delay="300">
+                                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                        <h5>Risaralda</h5>
+                                        <ul>
+                                            <li>FAMILIA</li>
+                                            <li>UNILEVER</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="map-iframe" data-aos="fade-left">
+                                <iframe
+                                    src="https://www.google.com/maps/d/embed?mid=15j6EdVzCkYjZFuzUvZAOBqjxXobqpxk&ehbc=2E312F&noprof=1"
+                                    width="640" height="480"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="capacitaciones" class="section">
+                    <div class="container text-center" data-aos="fade-in">
+                        <h2 class="section-title">Capacitaciones y Formación</h2>
+                        <p class="section-subtitle">Explora nuestros cursos y talleres para formación continua y
+                            profesional.</p>
+                        <a href="#" class="btn-primary" target="_blank">
+                            <i class="fas fa-graduation-cap"></i> Ir a Capacitaciones
+                        </a>
+                    </div>
+                </section>
+                <section id="trabaja-con-nosotros" class="section bg-light">
+                    <div class="container">
+                        <h2 class="section-title" data-aos="fade-up">¡Únete a Nuestro Equipo!</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                            Descubre las oportunidades disponibles en Tiendas y Marcas. ¡Tu próximo desafío profesional
+                            te espera!
+                        </p>
+
+                        <div class="vacancies-grid">
+                            <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="300">
+                                <i class="fas fa-handshake vacancy-icon" aria-hidden="true"></i>
+                                <h3>Asesor Comercial</h3>
+                                <p class="vacancy-role">Responsable del desarrollo de cartera y cumplimiento de metas de
+                                    venta en rutas asignadas. Se requiere moto/vehículo y experiencia.</p>
+                                <div class="vacancy-details">
+                                    <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Pereira/Manizales</span>
+                                    <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Ventas</span>
+                                </div>
+                                <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Asesor%20Comercial*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+                                    class="whatsapp-button" target="_blank">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
+                                </a>
+                            </div>
+                            <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="500">
+                                <i class="fas fa-boxes-stacked vacancy-icon" aria-hidden="true"></i>
+                                <h3>Auxiliar Logístico</h3>
+                                <p class="vacancy-role">Funciones de picking, packing, control de inventario y despacho
+                                    de pedidos. Clave para la eficiencia de nuestra distribución.</p>
+                                <div class="vacancy-details">
+                                    <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Dosquebradas</span>
+                                    <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Logística</span>
+                                </div>
+                                <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20Log%C3%ADstico*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+                                    class="whatsapp-button" target="_blank">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
+                                </a>
+                            </div>
+                            <div class="vacancy-card" data-aos="zoom-in" data-aos-delay="700">
+                                <i class="fas fa-warehouse vacancy-icon" aria-hidden="true"></i>
+                                <h3>Auxiliar de Bodega</h3>
+                                <p class="vacancy-role">Organización general de la bodega, recibo y ubicación de
+                                    productos, garantizando el orden y el flujo operativo diario.</p>
+                                <div class="vacancy-details">
+                                    <span><i class="fas fa-city" aria-hidden="true"></i> Sede: Dosquebradas</span>
+                                    <span><i class="fas fa-tag" aria-hidden="true"></i> Área: Bodega </span>
+                                </div>
+                                <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20estoy%20interesado%2Fa%20en%20la%20vacante%20de%20*Auxiliar%20de%20Bodega*%20que%20vi%20en%20la%20web.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+                                    class="whatsapp-button" target="_blank">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Aplicar por WhatsApp
+                                </a>
+                            </div>
+                        </div>
+
+                        <p class="text-center mt-5" data-aos="fade-up" data-aos-delay="900">
+                            ¿No encuentras tu cargo ideal? ¡Siempre estamos buscando talento! Envíanos tu hoja de vida.
+                            <br>
+                            <a href="https://api.whatsapp.com/send?phone=573242257085&text=Hola%2C%20me%20gustar%C3%ADa%20enviar%20mi%20hoja%20de%20vida%20para%20futuras%20oportunidades%20en%20TYM."
+                                class="btn-secondary mt-3" target="_blank">
+                                <i class="fas fa-paperclip" aria-hidden="true"></i> Enviar HV espontánea
+                            </a>
+                        </p>
+
+                    </div>
+                </section>
+                <section id="nomina" class="section bg-light">
+                    <div class="container text-center" data-aos="fade-in">
+                        <h2 class="section-title">Conoce tu Nómina</h2>
+                        <p class="section-subtitle">Accede a tu plataforma personal para consultar pagos y reportes
+                            laborales.</p>
+                        <a href="https://distri.tu-nomina.com/index.php/inicio" class="btn-primary" target="_blank">
+                            <i class="fas fa-file-invoice-dollar"></i> Ir a plataforma de Nómina
+                        </a>
+                    </div>
+                </section>
+                <section id="peticiones" class="section">
+                    <div class="container">
+                        <h2 class="section-title" data-aos="fade-up">Solicitudes y Constancias</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                            Llena este formulario para solicitar tu carta laboral, constancia o documento necesario.
+                        </p>
+
+                        <form id="solicitud-form" action="https://formspree.io/f/meoywalg" method="POST"
+                            class="form-modern" data-aos="fade-in" data-aos-delay="400">
+                            <div class="form-group">
+                                <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required
+                                    placeholder="Ingresa tu nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Tu correo electrónico</label>
+                                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="identificacion"><i class="fas fa-id-card"></i> Cédula /
+                                    Identificación</label>
+                                <input type="text" id="identificacion" name="identificacion" required
+                                    placeholder="Tu número de identificación">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo"><i class="fas fa-file-alt"></i> Tipo de solicitud</label>
+                                <select id="tipo" name="tipo" required>
+                                    <option value="">Selecciona el tipo de solicitud</option>
+                                    <option value="carta-laboral">Carta laboral</option>
+                                    <option value="constancia-ingresos">Constancia de ingresos</option>
+                                    <option value="otros">Otros (detallar en mensaje)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment-dots"></i> Información adicional o
+                                    detalles</label>
+                                <textarea id="message" name="message" rows="4" required
+                                    placeholder="Describe los detalles específicos de tu solicitud (destino, fechas, etc.)..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar Solicitud
+                            </button>
+                        </form>
+                    </div>
+                </section>
+                <section id="contacto" class="section bg-light">
+                    <div class="container">
+                        <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Estamos listos para
+                            atenderte y resolver tus dudas.</p>
+                        <div class="contact-grid">
+                            <div class="contact-info-card" data-aos="fade-right">
+                                <h3>Información de Contacto</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Carrera 16 Nº 77 -
+                                    00, Intersección La Romelia</p>
+                                <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> <a
+                                        href="tel:+573162821972">316 282 1972</a></p>
+                                <p><i class="fas fa-building"></i> <strong>Empresa:</strong> Tiendas y Marcas del Eje
+                                    Cafetero</p>
+                                <p><i class="fas fa-city"></i> <strong>Ciudad:</strong> Dosquebradas, Risaralda</p>
+                            </div>
+                            <div class="map-container" data-aos="fade-left">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.518773841109!2d-75.66149222603376!3d4.852348640326362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388121886525e3%3A0x90ce14bf8b9f5644!2sTiendas%20y%20marcas%20del%20eje%20cafetero!5e0!3m2!1ses!2sco!4v1762828308838!5m2!1ses!2sco"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    </main>
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description" class="modal-description"></p>
+            <ul id="modal-product-list" class="product-list">
+            </ul>
+            <a href="#contacto" class="btn-primary" id="modal-cta">Quiero estos productos</a>
         </div>
     </div>
-</section>
-</main>
-<div id="product-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">×</span>
-        <h3 id="modal-title"></h3>
-        <p id="modal-description" class="modal-description"></p>
-        <ul id="modal-product-list" class="product-list">
-        </ul>
-        <a href="#contacto" class="btn-primary" id="modal-cta">Quiero estos productos</a>
-    </div>
-</div>
 
     <div class="mascota-container">
-        <a href="https://wa.me/573242257085" target="_blank" aria-label="WhatsApp de soporte TYM"> <div class="mascota-bubble">¡Hola! resuelvo aquí tus dudas</div>
+        <a href="https://wa.me/573242257085" target="_blank" aria-label="WhatsApp de soporte TYM">
+            <div class="mascota-bubble">¡Hola! resuelvo aquí tus dudas</div>
             <img src="puma.png" class="mascota-img" alt="Mascota de soporte: un puma">
         </a>
     </div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content" data-aos="fade-up">
-            <p>© 2025 TAT. Todos los derechos reservados</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" data-aos="fade-up">
+                <p>© 2025 TAT. Todos los derechos reservados</p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-    // Inicializar AOS
-    AOS.init({
-        duration: 800, 
-        once: true,    
-        easing: 'ease-in-out',
-    });
-
-    // =========================================================
-    // Funcionalidad de la Navbar
-    // =========================================================
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navbar = document.querySelector('.navbar');
-    
-    // Funcionalidad Back-to-Top
-    const backToTopButton = document.getElementById('back-to-top');
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => { 
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out',
         });
-    });
-    
-    function handleBackToTopVisibility() {
-        if (backToTopButton) {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        }
-    }
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        handleBackToTopVisibility();
-    });
-    
-    if (backToTopButton) {
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        // =========================================================
+        // Funcionalidad de la Navbar
+        // =========================================================
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navbar = document.querySelector('.navbar');
+
+        // Funcionalidad Back-to-Top
+        const backToTopButton = document.getElementById('back-to-top');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
             });
         });
-    }
 
-    // =========================================================
-    // Funcionalidad Mapa SVG (Copiado de tu código original de TAT)
-    // =========================================================
-    function mostrarDeptoTAT(id) {
-        const departamentos = ['quindio', 'risaralda', 'caldas'];
-        departamentos.forEach(depto => {
-            const el = document.getElementById(`${depto}-tat`);
-            if (el) el.style.display = (depto === id) ? 'block' : 'none';
-        });
-    }
-
-    // Mostrar Risaralda por defecto
-    mostrarDeptoTAT('risaralda');
-
-
-    // =========================================================
-    // Funcionalidad de Modal de Productos (Adaptado a TAT)
-    // =========================================================
-
-    const productData = {
-        // PRODUCTO 1: Familia
-        familia: {
-            name: "Aseo y Cuidado Personal (FAMILIA)",
-            description: "Productos esenciales de la marca Familia, líder en papel, servilletas y toallas de cocina.",
-            products: ["Papel Higiénico", "Servilletas", "Toallas de Cocina", "Pañuelos faciales", "Protectores diarios"],
-            color: '#2980b9' // Azul
-        },
-        // PRODUCTO 2: Unilever
-        unilever: {
-            name: "Alimentos y Detergentes (UNILEVER)",
-            description: "Amplio portafolio de alimentos y productos para el hogar de las marcas de Unilever.",
-            products: ["Dove", "Salsas Fruco", "Maizena", "Detergentes", "Desodorantes"],
-            color: '#e74c3c' // Rojo
-        },
-        // PRODUCTO 3: Snacks
-        snack: {
-            name: "Snacks y Pasabocas",
-            description: "Variedad de productos dulces y salados para el consumo de impulso en tiendas.",
-            products: ["Galletas", "Gomas y caramelos", "Chocolates", "Bebidas", "Pasabocas empaquetados"],
-            color: '#f39c12' // Naranja
-        }
-    };
-
-    const modal = document.getElementById("product-modal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalDescription = document.getElementById("modal-description");
-    const productList = document.getElementById("modal-product-list"); 
-    const closeModal = document.querySelector(".close-button");
-    const productCards = document.querySelectorAll('.product-card.clickable-card');
-    const modalContent = document.querySelector('.modal-content');
-
-    productCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const key = this.getAttribute('data-product-key');
-            const data = productData[key];
-
-            if (data) {
-                // Actualizar el contenido del modal
-                modalTitle.textContent = data.name;
-                modalDescription.textContent = data.description;
-                productList.innerHTML = ''; 
-                
-                // Aplicar color de acento
-                modalTitle.style.color = data.color;
-                modalContent.style.borderTop = `5px solid ${data.color}`;
-
-                // Llenar lista de productos
-                data.products.forEach(product => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<i class="fas fa-check-circle"></i> ${product}`;
-                    productList.appendChild(li);
-                });
-                
-                // Ajustar el CTA
-                document.getElementById('modal-cta').textContent = `Contáctanos para distribución de ${key.toUpperCase()}`;
-
-
-                // Mostrar el modal
-                modal.style.display = "block";
-                document.body.style.overflow = "hidden"; // Deshabilitar scroll del fondo
+        function handleBackToTopVisibility() {
+            if (backToTopButton) {
+                if (window.scrollY > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
             }
-        });
-    });
-
-    // Función para cerrar el modal
-    function hideModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Habilitar scroll del fondo
-    }
-
-    // Cerrar al tocar la 'x'
-    closeModal.onclick = hideModal;
-
-    // Cerrar al tocar fuera del modal
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            hideModal();
         }
-    }
-    // Carrusel automático de fondo en el hero
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-slider .slide');
 
-function showNextSlide() {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
-}
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            handleBackToTopVisibility();
+        });
 
-// Cambia cada 6 segundos
-setInterval(showNextSlide, 3000);
+        if (backToTopButton) {
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
 
-</script>
+        // =========================================================
+        // Funcionalidad Mapa SVG (Copiado de tu código original de TAT)
+        // =========================================================
+        function mostrarDeptoTAT(id) {
+            const departamentos = ['quindio', 'risaralda', 'caldas'];
+            departamentos.forEach(depto => {
+                const el = document.getElementById(`${depto}-tat`);
+                if (el) el.style.display = (depto === id) ? 'block' : 'none';
+            });
+        }
+
+        // Mostrar Risaralda por defecto
+        mostrarDeptoTAT('risaralda');
+
+
+        // =========================================================
+        // Funcionalidad de Modal de Productos (Adaptado a TAT)
+        // =========================================================
+
+        const productData = {
+            // PRODUCTO 1: Familia
+            familia: {
+                name: "Aseo y Cuidado Personal (FAMILIA)",
+                description: "Productos esenciales de la marca Familia, líder en papel, servilletas y toallas de cocina.",
+                products: ["Papel Higiénico", "Servilletas", "Toallas de Cocina", "Pañuelos faciales", "Protectores diarios"],
+                color: '#2980b9' // Azul
+            },
+            // PRODUCTO 2: Unilever
+            unilever: {
+                name: "Alimentos y Detergentes (UNILEVER)",
+                description: "Amplio portafolio de alimentos y productos para el hogar de las marcas de Unilever.",
+                products: ["Dove", "Salsas Fruco", "Maizena", "Detergentes", "Desodorantes"],
+                color: '#e74c3c' // Rojo
+            },
+            // PRODUCTO 3: Snacks
+            snack: {
+                name: "Snacks y Pasabocas",
+                description: "Variedad de productos dulces y salados para el consumo de impulso en tiendas.",
+                products: ["Galletas", "Gomas y caramelos", "Chocolates", "Bebidas", "Pasabocas empaquetados"],
+                color: '#f39c12' // Naranja
+            }
+        };
+
+        const modal = document.getElementById("product-modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDescription = document.getElementById("modal-description");
+        const productList = document.getElementById("modal-product-list");
+        const closeModal = document.querySelector(".close-button");
+        const productCards = document.querySelectorAll('.product-card.clickable-card');
+        const modalContent = document.querySelector('.modal-content');
+
+        productCards.forEach(card => {
+            card.addEventListener('click', function () {
+                const key = this.getAttribute('data-product-key');
+                const data = productData[key];
+
+                if (data) {
+                    // Actualizar el contenido del modal
+                    modalTitle.textContent = data.name;
+                    modalDescription.textContent = data.description;
+                    productList.innerHTML = '';
+
+                    // Aplicar color de acento
+                    modalTitle.style.color = data.color;
+                    modalContent.style.borderTop = `5px solid ${data.color}`;
+
+                    // Llenar lista de productos
+                    data.products.forEach(product => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<i class="fas fa-check-circle"></i> ${product}`;
+                        productList.appendChild(li);
+                    });
+
+                    // Ajustar el CTA
+                    document.getElementById('modal-cta').textContent = `Contáctanos para distribución de ${key.toUpperCase()}`;
+
+
+                    // Mostrar el modal
+                    modal.style.display = "block";
+                    document.body.style.overflow = "hidden"; // Deshabilitar scroll del fondo
+                }
+            });
+        });
+
+        // Función para cerrar el modal
+        function hideModal() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Habilitar scroll del fondo
+        }
+
+        // Cerrar al tocar la 'x'
+        closeModal.onclick = hideModal;
+
+        // Cerrar al tocar fuera del modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                hideModal();
+            }
+        }
+        // Carrusel automático de fondo en el hero
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slider .slide');
+
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Cambia cada 6 segundos
+        setInterval(showNextSlide, 3000);
+
+    </script>
 
 
 </body>
+
 </html>
