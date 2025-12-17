@@ -43,6 +43,51 @@
     }
     </script>
 
+    <!-- JSON-LD SiteNavigationElement for Sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Nosotros",
+          "description": "Nuestra misión y servicios",
+          "url": "https://tiendasymarcaseje.com/tat.html#nosotros"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Productos",
+          "description": "Portafolio de productos",
+          "url": "https://tiendasymarcaseje.com/tat.html#productos"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Aliados",
+          "description": "Nuestros socios comerciales",
+          "url": "https://tiendasymarcaseje.com/tat.html#aliados"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Contacto",
+          "description": "Ponte en contacto con nosotros",
+          "url": "https://tiendasymarcaseje.com/tat.html#contacto"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Empleo",
+          "description": "Oportunidades laborales",
+          "url": "https://tiendasymarcaseje.com/tat.html#trabaja-con-nosotros"
+        }
+      ]
+    }
+    </script>
+
     <link rel="shortcut icon" href="logo_tat.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -56,6 +101,9 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="foc3.jpeg">
 </head>
 
 <body>
@@ -169,12 +217,12 @@
                 <div class="aliados-grid">
                     <div class="aliado-card" data-aos="fade-up" data-aos-delay="350">
                         <a href="https://www.unilever.co/">
-                            <img src="unileverr.png" alt="Logo Unilever">
+                            <img src="unileverr.png" alt="Logo Unilever" loading="lazy">
                         </a>
                     </div>
                     <div class="aliado-card" data-aos="fade-up" data-aos-delay="350">
                         <a href="https://www.familia.com.co/">
-                            <img src="familia.png" alt="Logo Familia">
+                            <img src="familia.png" alt="Logo Familia" loading="lazy">
                         </a>
                     </div>
 

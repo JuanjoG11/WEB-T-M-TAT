@@ -43,6 +43,51 @@
     }
     </script>
 
+    <!-- JSON-LD SiteNavigationElement for Sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Nosotros",
+          "description": "Nuestra historia y trayectoria",
+          "url": "https://tiendasymarcaseje.com/tym.html#nosotros"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Productos",
+          "description": "Catálogo de lácteos, carnes y más",
+          "url": "https://tiendasymarcaseje.com/tym.html#productos"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Aliados",
+          "description": "Marcas líderes como Alpina y Zenú",
+          "url": "https://tiendasymarcaseje.com/tym.html#aliados"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Contacto",
+          "description": "Contáctanos para distribución",
+          "url": "https://tiendasymarcaseje.com/tym.html#contacto"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Empleo",
+          "description": "Trabaja con nosotros",
+          "url": "https://tiendasymarcaseje.com/tym.html#trabaja-con-nosotros"
+        }
+      ]
+    }
+    </script>
+
     <link rel="shortcut icon" href="logo_tym.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,6 +97,9 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="foc3.jpeg">
 </head>
 
 <body>
@@ -230,23 +278,23 @@
                 <div class="aliados-grid">
                     <div class="aliado-card" data-aos="fade-up" data-aos-delay="400">
                         <a href="https://alpina.com/home-alpina">
-                            <img src="alpina3.png" alt="Logo de Alpina">
+                            <img src="alpina3.png" alt="Logo de Alpina" loading="lazy">
                         </a>
                     </div>
                     <div class="aliado-card" data-aos="fade-up" data-aos-delay="400">
                         <a href="https://zenu.com.co/">
 
-                            <img src="logos/zenu.png" alt="Logo de Zenú">
+                            <img src="logos/zenu.png" alt="Logo de Zenú" loading="lazy">
                         </a>
                     </div>
                     <div class="aliado-card" data-aos="fade-up" data-aos-delay="600">
                         <a href="https://empresaspolar.com/nuestra-compania-colombia/">
-                            <img src="logos/polar.png" alt="Logo de Polar">
+                            <img src="logos/polar.png" alt="Logo de Polar" loading="lazy">
                         </a>
                     </div>
                     <div class="aliado-card" data-aos="fade-up" data-aos-delay="800">
                         <a href="https://www.fleischmanncolombia.com.co/">
-                            <img src="flei.png" alt="Logo de Fleischmann">
+                            <img src="flei.png" alt="Logo de Fleischmann" loading="lazy">
                         </a>
                     </div>
                 </div>
