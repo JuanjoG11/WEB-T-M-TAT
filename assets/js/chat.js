@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     } else {
-        voiceText.innerHTML = "Navegador no compatible.";
+        voiceText.innerHTML = "<span>Tu navegador no soporta voz. ☹️<br>Por favor usa <b>Google Chrome</b> o <b>Microsoft Edge</b>.</span>";
         micBtn.style.display = 'none';
     }
 
