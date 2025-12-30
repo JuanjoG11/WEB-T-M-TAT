@@ -1,0 +1,8 @@
+{
+  "name": "tym-tat-assistant",
+  "version": "1.0.0",
+  "description": "AI Assistant for Tiendas y Marcas",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3"
+  }
+}

@@ -1,0 +1,201 @@
+/* Pumita Asistente - Corporate Theme Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.voice-modal {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 350px;
+  max-width: 90vw;
+  background-color: #ffffff;
+  border: 2px solid #2980b9;
+  /* Primary Blue */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(41, 128, 185, 0.3);
+  /* Blue shadow */
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  /* Dark text */
+  overflow: hidden;
+  padding: 0;
+}
+
+.voice-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Header: "PUMITA ASISTENTE" */
+.voice-header {
+  background: #2980b9;
+  /* Primary Blue */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.voice-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Icon / Waves in Header */
+.voice-waves {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 15px;
+}
+
+.voice-bar {
+  width: 3px;
+  background: white;
+  /* White bars on blue header */
+  border-radius: 2px;
+  animation: quiet 1.2s ease-in-out infinite;
+}
+
+.voice-bar:nth-child(1) {
+  height: 8px;
+  animation-delay: 0.0s;
+}
+
+.voice-bar:nth-child(2) {
+  height: 14px;
+  animation-delay: 0.1s;
+}
+
+.voice-bar:nth-child(3) {
+  height: 6px;
+  animation-delay: 0.2s;
+}
+
+.voice-bar:nth-child(4) {
+  height: 10px;
+  animation-delay: 0.3s;
+}
+
+.voice-modal.speaking .voice-bar {
+  background: #e67e22;
+  /* Orange when speaking (Puma color) */
+  animation: loud 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes quiet {
+
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0.7);
+  }
+}
+
+@keyframes loud {
+  0% {
+    transform: scaleY(0.5);
+  }
+
+  100% {
+    transform: scaleY(1.5);
+  }
+}
+
+/* Main Text Area */
+.voice-content {
+  background: #f8f9fa;
+  /* Very light gray */
+  margin: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #34495e;
+  border: 1px solid #e1e1e1;
+}
+
+/* Footer Controls */
+.voice-controls {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listening-text {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 600;
+}
+
+.listening-active {
+  color: #e67e22;
+  /* Orange accent */
+  animation: pulseText 1.5s infinite;
+}
+
+@keyframes pulseText {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Mic Button */
+.voice-btn-action {
+  background: #e67e22;
+  /* Secondary Orange */
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.voice-btn-action:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
+  background: #d35400;
+}
+
+.voice-btn-action i {
+  font-size: 1.3rem;
+}
+
+/* Mascot Trigger styling */
+.mascota-container {
+  z-index: 9999;
+}
