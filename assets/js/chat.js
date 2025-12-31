@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const mascotLink = document.querySelector('.mascota-container a');
 
     // 3. State & APIs
+    const isTAT = window.location.pathname.includes('tat.html');
+    const chatbotContext = isTAT ? 'TAT' : 'TYM';
+    const whatsappNumber = isTAT ? '324 225 7085' : '316 282 1972';
+
     let synthesis = window.speechSynthesis;
     let recognition = null;
     let isSpeaking = false;
@@ -93,7 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.add('active');
         // AUTO-START CONVERSATION
         if (!isSpeaking) {
-            const greeting = "¡Hola! Soy el Pumita Asistente de TYM. ¿Cómo te ayudo?";
+            const greeting = isTAT 
+                ? "¡Hola! Soy el Pumita Asistente de TAT. Distribuyo Unilever y Familia. ¿Cómo te ayudo?"
+                : "¡Hola! Soy el Pumita Asistente de TYM. Conecto marcas como Alpina y Zenú. ¿Qué necesitas?";
             typeWriter(voiceText, greeting);
             speak(greeting, true); // True to auto-listen after speaking
         }
@@ -129,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: text })
+                body: JSON.stringify({ message: text, context: chatbotContext })
             });
 
             if (!response.ok) throw new Error('API Error');
@@ -160,37 +166,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 1. SALUDOS Y EMPATÍA
         if (text.match(/hola|inicio|buenos|buenas|estás ahí/)) {
-            response = "¡Hola! Soy el Pumita Asistente de TYM. Conozco nuestra historia, cobertura y portafolio. ¿Qué necesitas saber?";
+            response = `¡Hola! Soy el Pumita Asistente de ${chatbotContext}. Conozco nuestra historia, cobertura y portafolio. ¿Qué necesitas saber?`;
         }
 
         // 2. HISTORIA Y EMPRESA
         else if (text.match(/historia|fundada|creada|origen|quienes somos|empresa/)) {
-            response = "TYM se fundó en 2016 en Pereira distribuendo Alpina. En 2018 crecimos a Manizales, en 2019 a Armenia, y hoy operamos todo el Eje Cafetero con logística unificada.";
+            response = "TYM se fundó en 2016 en Pereira distribuyendo Alpina. Crecimos por todo el Eje Cafetero y en 2024 unificamos operaciones en nuestra bodega principal de Pereira.";
         }
 
-        // 3. COBERTURA GEOGRÁFICA (Muy específico)
+        // 3. COBERTURA GEOGRÁFICA (Específico TAT vs TYM)
         else if (text.match(/cobertura|donde llegan|cubrimiento|mapa/)) {
-            response = "Cubrimos Risaralda, Caldas, Quindío y Norte del Valle, llegando directamente a tiendas y comercios.";
+            response = isTAT 
+                ? "En TAT cubrimos Risaralda y Caldas, llevando Unilever y Familia directamente a los tenderos."
+                : "En TYM cubrimos Risaralda, Caldas, Quindío y Norte del Valle con marcas líderes.";
         }
         else if (text.match(/risaralda|pereira/)) {
-            response = "En Risaralda distribuimos Alpina, Fleischmann y Zenú. Nuestra sede principal está en Dosquebradas.";
+            response = isTAT
+                ? "En Risaralda distribuimos Familia y Unilever. ¡Llegamos a todas las tiendas!"
+                : "En Risaralda distribuimos Alpina, Fleischmann y Zenú. Nuestra sede está en Dosquebradas.";
         }
         else if (text.match(/caldas|manizales/)) {
-            response = "En Caldas llevamos Alpina, Polar y Fleischmann. Tenemos operación fuerte en Manizales.";
+            response = isTAT
+                ? "En Caldas operamos con Unilever, cubriendo Manizales y municipios cercanos."
+                : "En Caldas llevamos Alpina, Polar y Fleischmann. Tenemos operación propia en Manizales.";
         }
         else if (text.match(/quindio|armenia/)) {
-            response = "Para el Quindío contamos con Alpina, Fleischmann y Polar. Atendemos toda la zona desde Armenia.";
+            response = "En el Quindío atendemos toda la zona desde Armenia con nuestro portafolio de marcas aliadas.";
         }
         else if (text.match(/norte del valle|cartago/)) {
             response = "En el Norte del Valle somos distribuidores oficiales de Alpina y Zenú.";
         }
 
-        // 4. PORTAFOLIO DE MARCAS
+        // 4. PORTAFOLIO DE MARCAS (TAT vs TYM)
+        else if (text.match(/unilever|jabón|detergente|comida|fruco|rexona|dove/)) {
+            response = "En TAT somos distribuidores oficiales de UNILEVER: Salsas Fruco, Dove, Rexona, Detergentes y más. ¡Ideal para tu negocio!";
+        }
+        else if (text.match(/familia|papel|higiene|servilletas|nosotras/)) {
+            response = "Distribuimos la línea completa de FAMILIA: Papel higiénico, servilletas, toallas de cocina y productos Nosotras.";
+        }
         else if (text.match(/alpina|leche|yogo|queso|bon yurt/)) {
-            response = "Somos distribuidores máster de ALPINA: Leches, Yogo Yogo, Quesos Finesse, Avena y toda la línea fría.";
+            response = "Para la línea de ALPINA (Leches, Yogurt, Quesos), revisa nuestra sección de TYM para mayoristas.";
         }
         else if (text.match(/zenu|zenú|carne|salchicha|jamon|ranchera|embutido/)) {
-            response = "Llevamos el sabor de ZENÚ: Salchichas Rancheras, Jamones, Mortadela y toda la línea de cárnicos. Especialmente en Risaralda y Norte del Valle.";
+            response = "Los cárnicos de ZENÚ se distribuyen principalmente en Risaralda y Norte del Valle a través de TYM.";
         }
         else if (text.match(/fleischmann|panaderia|levadura|margarina/)) {
             response = "Para panaderías tenemos FLEISCHMANN: levaduras, margarinas y repostería de alta calidad.";
@@ -198,24 +216,29 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (text.match(/polar|harina|pan|mascotas|donkan/)) {
             response = "Distribuimos POLAR: Harinas P.A.N, Avenas y alimento para mascotas Donkan.";
         }
+        else if (text.match(/snacks|papas|galletas/)) {
+            response = "Manejamos un variado portafolio de Snacks y Pasabocas para el consumo diario en tiendas.";
+        }
         else if (text.match(/productos|catalogo|venden/)) {
-            response = "Manejamos líderes como Alpina, Zenú, Familia, Unilever y Polar. Dime una marca y te doy detalles. 🛒";
+            response = isTAT 
+                ? "En TAT vendemos Unilever, Familia y Snacks. ¿Sobre cuál marca quieres información? 🛒"
+                : "En TYM manejamos Alpina, Zenú, Fleischmann y Polar. ¿Qué marca buscas? 🛒";
         }
 
         // 5. SERVICIOS Y TRÁMITES
         else if (text.match(/vacante|trabajo|empleo|hoja de vida/)) {
-            response = "¡Buscamos talento! Necesitamos Asesores Comerciales (con moto) y Auxiliares Logísticos. Escríbenos al WhatsApp 316 282 1972 para aplicar.";
+            response = `¡Buscamos talento! Necesitamos Asesores Comerciales y Auxiliares. Escríbenos al WhatsApp ${whatsappNumber} para aplicar.`;
         }
         else if (text.match(/nomina|pago|desprendible/)) {
-            response = "Si eres empleado, puedes ver tu desprendible en la plataforma de 'Tu-Nómina' en nuestra web.";
+            response = "Puedes consultar tu nómina en la plataforma web. Busca el botón 'Ir a plataforma de Nómina'.";
         }
         else if (text.match(/certificado|carta laboral|constancia/)) {
-            response = "Puedes solicitar tu carta laboral aquí mismo en la sección 'Solicitudes'. Llénala y te la enviamos.";
+            response = "Solicita tu carta laboral en la sección de 'Solicitudes' de nuestra página web.";
         }
 
         // 6. JJ TECH
         else if (text.match(/web|página|software|jj tech|creador/)) {
-            response = "Soy una creación de JJ TECH. Hacemos webs desde $500.000 y software a la medida. ¿Te agendo una demo?";
+            response = "Soy una creación de JJ TECH. Creamos soluciones digitales modernas. ¿Quieres que te contacte un desarrollador?";
         }
         else if (text.match(/precio|costo|cotizacion/)) {
             response = "Si es sobre webs, desde $500k. Si es productos TYM, varía según el pedido. ¿Qué necesitas?";
@@ -223,15 +246,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 7. CONTACTO Y UBICACIÓN
         else if (text.match(/ubicacion|direccion|donde estan/)) {
-            response = "Estamos en Dosquebradas, Carrera 16 # 77-00, sector La Romelia. ¡Visítanos!";
+            response = "Estamos ubicados en Dosquebradas, Carrera 16 # 77-00, sector La Romelia.";
         }
         else if (text.match(/telefono|celular|llamada|contacto/)) {
-            response = "Llámanos o escribe al 316 282 1972. Estamos listos para atenderte.";
+            response = `Puedes contactarnos al WhatsApp ${whatsappNumber}. ¡Estamos para servirte!`;
         }
 
-        // 8. FALLBACK FINAL (Inteligente)
+        // 8. FALLBACK FINAL
         else {
-            response = "Entiendo que buscas información específica. Para eso, lo más rápido es hablar con un asesor humano al 316 282 1972. ¿Te ayudo con algo más?";
+            response = `Entiendo tu consulta sobre ${text}. Lo mejor es hablar con un asesor especializado al ${whatsappNumber}. ¿Te ayudo con algo más?`;
         }
 
         typeWriter(voiceText, response);
