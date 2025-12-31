@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 7. CONTACTO Y UBICACIÓN
         else if (text.match(/ubicacion|direccion|donde estan/)) {
-            response = "Estamos ubicados en Dosquebradas, Carrera 16 # 77-00, sector La Romelia.";
+            response = "Nuestra ubicación exacta es Carrera 1 6, número 7 7 guion 0 0, Intersección La Romelia, en Dosquebradas. También puedes ver el mapa en la sección de 'Contáctanos' de nuestra web.";
         }
         else if (text.match(/telefono|celular|llamada|contacto/)) {
             response = `Puedes contactarnos al WhatsApp ${whatsappNumber}. ¡Estamos para servirte!`;
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 8. FALLBACK FINAL
         else {
-            response = `Entiendo tu consulta sobre ${text}. Lo mejor es hablar con un asesor especializado al ${whatsappNumber}. ¿Te ayudo con algo más?`;
+            response = `Toda nuestra información oficial de productos, coberturas y empleo está disponible aquí mismo en la página web. Si buscas nuestra ubicación, entra en la sección de 'Contáctanos' o escríbenos al WhatsApp ${whatsappNumber}.`;
         }
 
         typeWriter(voiceText, response);
