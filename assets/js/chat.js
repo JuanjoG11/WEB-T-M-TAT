@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.add('active');
         // AUTO-START CONVERSATION
         if (!isSpeaking) {
-            const greeting = isTAT 
-                ? "¡Hola! Soy el Pumita Asistente de TAT. Distribuyo Unilever y Familia. ¿Cómo te ayudo?"
+            const greeting = isTAT
+                ? "¡Hola! Soy el Pumita Asistente de TAT Distribuciones. Distribuyo Unilever y Familia. ¿Cómo te ayudo?"
                 : "¡Hola! Soy el Pumita Asistente de TYM. Conecto marcas como Alpina y Zenú. ¿Qué necesitas?";
             typeWriter(voiceText, greeting);
             speak(greeting, true); // True to auto-listen after speaking
@@ -166,29 +166,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 1. SALUDOS Y EMPATÍA
         if (text.match(/hola|inicio|buenos|buenas|estás ahí/)) {
-            response = `¡Hola! Soy el Pumita Asistente de ${chatbotContext}. Conozco nuestra historia, cobertura y portafolio. ¿Qué necesitas saber?`;
+            const name = isTAT ? 'TAT Distribuciones' : 'TYM';
+            response = `¡Hola! Soy el Pumita Asistente de ${name}. Conozco nuestra historia, cobertura y portafolio. ¿Qué necesitas saber?`;
         }
 
         // 2. HISTORIA Y EMPRESA
         else if (text.match(/historia|fundada|creada|origen|quienes somos|empresa/)) {
-            response = "TYM se fundó en 2016 en Pereira distribuyendo Alpina. Crecimos por todo el Eje Cafetero y en 2024 unificamos operaciones en nuestra bodega principal de Pereira.";
+            response = "Tiendas y Marcas (TYM) nació en 2016 en Pereira con Alpina. En 2024 unificamos toda nuestra logística en la bodega de Dosquebradas para atender mejor a todo el Eje Cafetero.";
         }
 
         // 3. COBERTURA GEOGRÁFICA (Específico TAT vs TYM)
         else if (text.match(/cobertura|donde llegan|cubrimiento|mapa/)) {
-            response = isTAT 
-                ? "En TAT cubrimos Risaralda y Caldas, llevando Unilever y Familia directamente a los tenderos."
-                : "En TYM cubrimos Risaralda, Caldas, Quindío y Norte del Valle con marcas líderes.";
+            response = isTAT
+                ? "En TAT Distribuciones cubrimos Risaralda (Familia/Unilever) y Caldas (Unilever), llevando productos directo a los tenderos."
+                : "En TYM cubrimos Risaralda, Caldas, Quindío y Norte del Valle con marcas como Alpina, Zenú y Polar.";
         }
         else if (text.match(/risaralda|pereira/)) {
             response = isTAT
-                ? "En Risaralda distribuimos Familia y Unilever. ¡Llegamos a todas las tiendas!"
-                : "En Risaralda distribuimos Alpina, Fleischmann y Zenú. Nuestra sede está en Dosquebradas.";
+                ? "En Risaralda distribuimos Familia y Unilever. ¡Llegamos a todas las tiendas de barrio!"
+                : "En Risaralda distribuimos Alpina, Fleischmann y Zenú. Operamos desde Dosquebradas.";
         }
         else if (text.match(/caldas|manizales/)) {
             response = isTAT
-                ? "En Caldas operamos con Unilever, cubriendo Manizales y municipios cercanos."
-                : "En Caldas llevamos Alpina, Polar y Fleischmann. Tenemos operación propia en Manizales.";
+                ? "En Caldas operamos con Unilever para el canal TAT, cubriendo Manizales y el área metropolitana."
+                : "En Caldas llevamos Alpina, Polar y Fleischmann. Contamos con logística propia en Manizales.";
         }
         else if (text.match(/quindio|armenia/)) {
             response = "En el Quindío atendemos toda la zona desde Armenia con nuestro portafolio de marcas aliadas.";
@@ -198,29 +199,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 4. PORTAFOLIO DE MARCAS (TAT vs TYM)
-        else if (text.match(/unilever|jabón|detergente|comida|fruco|rexona|dove/)) {
-            response = "En TAT somos distribuidores oficiales de UNILEVER: Salsas Fruco, Dove, Rexona, Detergentes y más. ¡Ideal para tu negocio!";
+        else if (text.match(/unilever|jabón|detergente|comida|fruco|rexona|dove|maizena/)) {
+            response = "En TAT Distribuciones somos aliados de UNILEVER: Salsas Fruco, Dove, Rexona, Maizena y detergentes líderes.";
         }
-        else if (text.match(/familia|papel|higiene|servilletas|nosotras/)) {
-            response = "Distribuimos la línea completa de FAMILIA: Papel higiénico, servilletas, toallas de cocina y productos Nosotras.";
+        else if (text.match(/familia|papel|higiene|servilletas|nosotras|toallas/)) {
+            response = "Distribuimos todo el portafolio de FAMILIA: Papel higiénico, servilletas, toallas de manos y la línea Nosotras.";
         }
-        else if (text.match(/alpina|leche|yogo|queso|bon yurt/)) {
-            response = "Para la línea de ALPINA (Leches, Yogurt, Quesos), revisa nuestra sección de TYM para mayoristas.";
+        else if (text.match(/alpina|leche|yogo|queso|bon yurt|kumis/)) {
+            response = "Para productos ALPINA como quesos, yogurt y leches, contacta a nuestra línea de TYM Mayorista.";
         }
         else if (text.match(/zenu|zenú|carne|salchicha|jamon|ranchera|embutido/)) {
-            response = "Los cárnicos de ZENÚ se distribuyen principalmente en Risaralda y Norte del Valle a través de TYM.";
+            response = "Los cárnicos ZENÚ (Salchichas Rancheras, Jamón) son distribuidos por TYM en Risaralda y Norte del Valle.";
         }
         else if (text.match(/fleischmann|panaderia|levadura|margarina/)) {
             response = "Para panaderías tenemos FLEISCHMANN: levaduras, margarinas y repostería de alta calidad.";
         }
         else if (text.match(/polar|harina|pan|mascotas|donkan/)) {
-            response = "Distribuimos POLAR: Harinas P.A.N, Avenas y alimento para mascotas Donkan.";
+            response = "Distribuimos POLAR: Harina P.A.N., Avenas y alimento Donkan en Caldas y Quindío.";
         }
-        else if (text.match(/snacks|papas|galletas/)) {
-            response = "Manejamos un variado portafolio de Snacks y Pasabocas para el consumo diario en tiendas.";
+        else if (text.match(/snacks|papas|galletas|gomas/)) {
+            response = "Manejamos Snacks y Pasabocas de impulso: galletas, gomas, chocolates y bebidas para tiendas.";
         }
         else if (text.match(/productos|catalogo|venden/)) {
-            response = isTAT 
+            response = isTAT
                 ? "En TAT vendemos Unilever, Familia y Snacks. ¿Sobre cuál marca quieres información? 🛒"
                 : "En TYM manejamos Alpina, Zenú, Fleischmann y Polar. ¿Qué marca buscas? 🛒";
         }
@@ -277,6 +278,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Format Phone Numbers to be read digit by digit (3 1 6...)
         speakText = speakText.replace(/316 282 1972/g, "3 1 6, 2 8 2, 1 9 7 2");
         speakText = speakText.replace(/3162821972/g, "3 1 6, 2 8 2, 1 9 7 2");
+
+        // 3. Pronunciation fixes
+        speakText = speakText.replace(/TYM/g, "TIM");
+        speakText = speakText.replace(/tym/gi, "TIM");
 
         const utterance = new SpeechSynthesisUtterance(speakText);
         utterance.lang = 'es-CO';
