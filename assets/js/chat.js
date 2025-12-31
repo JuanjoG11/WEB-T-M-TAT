@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mascotLink = document.querySelector('.mascota-container a');
 
     // 3. State & APIs
-    const isTAT = window.location.pathname.includes('tat.html');
+    const isTAT = window.location.pathname.toLowerCase().includes('tat');
     const chatbotContext = isTAT ? 'TAT' : 'TYM';
     const whatsappNumber = isTAT ? '324 225 7085' : '316 282 1972';
 
